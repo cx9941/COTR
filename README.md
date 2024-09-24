@@ -9,7 +9,8 @@ French job descriptions：https://borealisdata.ca/dataset.xhtml?persistentId=doi
 ### File
 ```
 └── data
-    ├── ali               ## data for chinese job descriptions
-    ├── linkedln          ## data for english job descriptions
-    └── task.list         ## data for all task from O*Net
+    ├── ch               ## data for chinese job descriptions
+    ├── en               ## data for english job descriptions
+    ├── fr               ## data for french job descriptions
+    └── task.list        ## data for all task from O*Net
 ```
