@@ -3,9 +3,14 @@ COTR: Efficient Job Task Recognition for Occupational Information Systems with C
 
 ## Data
 ### Source Data
-（中文）阿里天池：https://tianchi.aliyun.com/dataset/182419
+Chinese job descriptions：https://tianchi.aliyun.com/dataset/182419
 
-（英文）领英数据：https://www.kaggle.com/datasets/arshkon/linkedin-job-postings
+English job descriptions：https://www.kaggle.com/datasets/arshkon/linkedin-job-postings
 
 ### File
---data
+```
+└── data
+    ├── ali               ## data for chinese job descriptions
+    ├── linkedln          ## data for english job descriptions
+    └── task.list         ## data for all task from O*Net
+```
