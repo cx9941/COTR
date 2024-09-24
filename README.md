@@ -1,6 +1,3 @@
-# COTR
-COTR: Efficient Job Task Recognition for Occupational Information Systems with Class-Incremental Learning
-
 ## Data
 ### Source Data
 Chinese job descriptions：https://tianchi.aliyun.com/dataset/182419
