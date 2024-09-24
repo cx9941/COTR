@@ -1,2 +1,1 @@
-/data/chenxi/research/conference/TMIS/data/linkedln/raw_data/linkedln_total.csv filter=lfs diff=lfs merge=lfs -text
-/data/chenxi/research/conference/TMIS/data/linkedln/all_data.csv filter=lfs diff=lfs merge=lfs -text
+data/linkedln/all_data.csv filter=lfs diff=lfs merge=lfs -text

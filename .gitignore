@@ -1,1 +1,10 @@
-data
+.vscode
+*temp*
+__pycache__
+logs
+outputs
+nohup.out
+gabarage
+extra*
+*raw_data*
+run.ipynb

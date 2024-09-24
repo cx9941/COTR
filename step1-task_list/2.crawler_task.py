@@ -21,4 +21,4 @@ def extract_task(url):
 
 df['task'] = df['href'].progress_apply(extract_task)
 df = df.explode('task')
-df.to_csv('../data/task_art.csv', index=None, sep='\t')
+df.to_csv('task_art.csv', index=None, sep='\t')
