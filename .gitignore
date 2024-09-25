@@ -7,3 +7,6 @@ nohup.out
 gabarage
 extra*
 *raw_data*
+llms
+.DS_Store
+data
