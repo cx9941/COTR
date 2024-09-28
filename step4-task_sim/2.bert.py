@@ -13,9 +13,12 @@ args = parser.parse_args()
 if not os.path.exists(f'outputs/{args.dataset_name}'):
     os.makedirs(f'outputs/{args.dataset_name}')
 
-for data_type, col in zip(['task', 'all_data'], ['task', 'text']):
-    df = pd.read_csv(f'../data/{args.dataset_name}/{data_type}.csv', sep='\t')
-    text_list = df[col].tolist()
+for data_type in ['task', 'all_data_task']:
+    if data_type == 'task':
+        df = pd.read_csv(f'../data/{args.dataset_name}/{data_type}.csv', sep='\t')
+    else:
+        df = pd.read_csv(f'outputs/{args.dataset_name}/{data_type}.csv', sep='\t')
+    text_list = df['task'].tolist()
     tokenizer = BertTokenizer.from_pretrained('../llms/bert-base-uncased')
     model = BertModel.from_pretrained('../llms/bert-base-uncased').to(args.device)
     def get_batch_embeddings(text_list, model, tokenizer, batch_size=512):
