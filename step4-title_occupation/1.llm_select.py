@@ -1,5 +1,4 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '4,5,6,7'
 from accelerate import Accelerator
 from accelerate.utils import gather_object
 from transformers import AutoModelForCausalLM, AutoTokenizer
