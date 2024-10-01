@@ -6,9 +6,9 @@ import torch
 from tqdm import tqdm
 import argparse
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset_name', default='en')
+parser.add_argument('--dataset_name', default='eu')
 parser.add_argument('--device', default='cuda')
-parser.add_argument('--data_type', default='occupation')
+parser.add_argument('--data_type', default='title')
 args = parser.parse_args()
 
 if not os.path.exists(f'outputs/{args.dataset_name}'):

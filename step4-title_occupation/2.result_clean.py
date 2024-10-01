@@ -21,8 +21,8 @@ task_occupation = pd.read_csv(f'../data/{args.dataset_name}/task_occupation.csv'
 
 # 读取输出文件
 content_list = []
-for i in (os.listdir(args.output_dir)):
-    content = open(f"{args.output_dir}/{i}", 'r').read()
+for i in range(len(os.listdir(args.output_dir))):
+    content = open(f"{args.output_dir}/{i}.txt", 'r').read()
     content_list.append(content)
 ans = pd.DataFrame(content_list)
 
@@ -37,4 +37,4 @@ final_ans.to_parquet(f'{args.result_dir}/result{args.turn}.parquet')
 
 # 保存未处理好的文件
 left_ans = occupation_candidate[~occupation_candidate['title'].isin(final_ans['title'])]
-left_ans.to_parquet(f'{args.next_input_dir}/task_candidate.parquet')
+left_ans.to_parquet(f'{args.next_input_dir}/occupation_candidate.parquet')

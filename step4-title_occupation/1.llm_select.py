@@ -45,6 +45,8 @@ start=time.time()
 with accelerator.split_between_processes(prompts_all) as prompts:
     results=dict(outputs=[], num_tokens=0)
     for prompt in tqdm(prompts):
+        if os.path.exists(f'{args.output_dir}/{prompt[0]}.txt'):
+            continue
         prompt_tokenized=tokenizer(prompt[1], return_tensors="pt").to("cuda")
         output_tokenized = model.generate(**prompt_tokenized, max_new_tokens=200, pad_token_id=tokenizer.eos_token_id)[0]
         result = tokenizer.decode(output_tokenized)

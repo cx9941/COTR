@@ -1,5 +1,4 @@
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
 import pandas as pd
 from transformers import BertTokenizer, BertModel
 import re
@@ -11,8 +10,9 @@ parser.add_argument('--dataset_name', default='en')
 parser.add_argument('--device', default='cuda')
 args = parser.parse_args()
 
-action_verbs = ["Prepare", "Organize", "Design", "Lead", "Complete", "Participate"]
-keywords = ["team", "software", "development", "feedback"]
+action_verbs = ["Prepare", "Organize", "Design", "Lead", "Complete", "Participate", "Managing", "Track", "Plan", "Communicate", "Manage"] + ["Manage", "Develop", "Plan", "Coordinate", "Implement", "Prepare", "Organize", "Oversee", "Lead", "Execute", "Support", "Monitor", "Receive", "Maintain"]
+action_verbs = list(set(action_verbs))
+keywords = ["develop", "prepare", "coordinate", "oversee", "lead", "support","is commited to"]
 
 
 def extract_job_tasks(job_description):
@@ -37,8 +37,12 @@ if not os.path.exists(f'outputs/{args.dataset_name}'):
 
 
 df = pd.read_csv(f'../data/{args.dataset_name}/job_description.csv', sep='\t')
+df = df[df['description'].apply(type)==type('')]
 df['task'] = df['description'].progress_apply(extract_job_tasks)
 df_task = df[df['task'].apply(len)>0].explode('task')
 df_task = df_task.drop_duplicates('task')
 df_task.to_csv(f'outputs/{args.dataset_name}/job_task.csv', index=None, sep='\t')
-df_task
+
+df = df[['title', 'task']]
+df.columns = ['title', 'description']
+df.to_csv(f'outputs/{args.dataset_name}/title_task.csv', index=None, sep='\t')
