@@ -1,0 +1,248 @@
+nohup: ignoring input
+The following values were not passed to `accelerate launch` and had defaults used instead:
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.60s/it]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.39it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.55it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.45it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.15s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.33it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.54it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.42it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:00,  1.02it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.32it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.54it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.46it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.16it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.81it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.60it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.04it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.82it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.50it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.08it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.80it/s]
+  0%|          | 0/1814 [00:00<?, ?it/s]  0%|          | 0/1813 [00:00<?, ?it/s]  0%|          | 0/1813 [00:00<?, ?it/s]  0%|          | 0/1813 [00:00<?, ?it/s]100%|██████████| 1813/1813 [00:00<00:00, 212963.09it/s]
+100%|██████████| 1813/1813 [00:00<00:00, 212001.26it/s]
+100%|██████████| 1813/1813 [00:00<00:00, 197611.11it/s]
+100%|██████████| 1814/1814 [00:00<00:00, 194271.97it/s]
+The following values were not passed to `accelerate launch` and had defaults used instead:
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.20it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.14it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.11s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.42it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.17it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.16it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.34it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.37s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.17it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.26it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.10it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.17s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.65it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.43it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.73it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.55it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.52it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.36it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.03s/it]
+  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/51 [00:00<?, ?it/s]  0%|          | 0/50 [00:00<?, ?it/s]  0%|          | 0/50 [00:00<?, ?it/s]100%|██████████| 51/51 [00:00<00:00, 169904.29it/s]
+100%|██████████| 50/50 [00:00<00:00, 176379.48it/s]
+100%|██████████| 50/50 [00:00<00:00, 127100.12it/s]
+100%|██████████| 50/50 [00:00<00:00, 166176.86it/s]
+The following values were not passed to `accelerate launch` and had defaults used instead:
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.58s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.32it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.52it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.50it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.15s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.29it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.52it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.49it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:00,  1.02it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.29it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.41it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.44it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.45it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.16it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.80it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.57it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.94it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.74it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.95it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.74it/s]
+  0%|          | 0/407 [00:00<?, ?it/s]  0%|          | 0/406 [00:00<?, ?it/s]  0%|          | 0/406 [00:00<?, ?it/s]  0%|          | 0/406 [00:00<?, ?it/s]100%|██████████| 407/407 [00:00<00:00, 199472.04it/s]
+100%|██████████| 406/406 [00:00<00:00, 198240.68it/s]
+100%|██████████| 406/406 [00:00<00:00, 214794.07it/s]
+100%|██████████| 406/406 [00:00<00:00, 231653.85it/s]
+The following values were not passed to `accelerate launch` and had defaults used instead:
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.16it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.14it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.11it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.03s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.32it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.22it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.17it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.36s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.37it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.26it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.23it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.85it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.60it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.09s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.76it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.51it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.74it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.48it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.01it/s]
+  0%|          | 0/12 [00:00<?, ?it/s]  0%|          | 0/11 [00:00<?, ?it/s]  0%|          | 0/12 [00:00<?, ?it/s]100%|██████████| 12/12 [00:00<00:00, 105961.36it/s]
+100%|██████████| 11/11 [00:00<00:00, 111983.84it/s]
+100%|██████████| 12/12 [00:00<00:00, 111600.11it/s]
+  0%|          | 0/11 [00:00<?, ?it/s]100%|██████████| 11/11 [00:00<00:00, 90643.11it/s]
+The following values were not passed to `accelerate launch` and had defaults used instead:
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.27it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.23it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.18it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.03s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.26it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.23it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.20it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.28s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.26it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.24it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.22it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.02s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.75it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.53it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.71it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.50it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.71it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.48it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.44it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.08it/s]
+  0%|          | 0/155 [00:00<?, ?it/s]  0%|          | 0/154 [00:00<?, ?it/s]  0%|          | 0/155 [00:00<?, ?it/s]100%|██████████| 154/154 [00:00<00:00, 187877.49it/s]
+100%|██████████| 155/155 [00:00<00:00, 177095.37it/s]
+100%|██████████| 155/155 [00:00<00:00, 204118.41it/s]
+  0%|          | 0/155 [00:00<?, ?it/s]100%|██████████| 155/155 [00:00<00:00, 220378.68it/s]
+The following values were not passed to `accelerate launch` and had defaults used instead:
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.54s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.52it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.38it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.35it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.13s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.53it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.43it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.35it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:00,  1.02it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.54it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.47it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.17it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.49it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.06it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.83it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.42it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.08it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.79it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.96it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.70it/s]
+  0%|          | 0/4 [00:00<?, ?it/s]100%|██████████| 4/4 [00:00<00:00, 50686.45it/s]
+  0%|          | 0/3 [00:00<?, ?it/s]  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 40590.04it/s]
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 30541.05it/s]
+100%|██████████| 3/3 [00:00<00:00, 44779.05it/s]
+The following values were not passed to `accelerate launch` and had defaults used instead:
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.62s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.37it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.41it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.44it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.15s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.30it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.25it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.48it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:00,  1.04it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.81it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.59it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.43it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.15it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.25it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.58it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.70it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.52it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.18it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.88it/s]
+  0%|          | 0/86 [00:00<?, ?it/s]  0%|          | 0/87 [00:00<?, ?it/s]  0%|          | 0/86 [00:00<?, ?it/s]100%|██████████| 86/86 [00:00<00:00, 171277.37it/s]
+100%|██████████| 87/87 [00:00<00:00, 169172.21it/s]
+  0%|          | 0/87 [00:00<?, ?it/s]100%|██████████| 86/86 [00:00<00:00, 190247.97it/s]
+100%|██████████| 87/87 [00:00<00:00, 161319.38it/s]
+The following values were not passed to `accelerate launch` and had defaults used instead:
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.61s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.35it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.57it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.43it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.14s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.33it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.53it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.41it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:00,  1.03it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.33it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.44it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.43it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.49it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.17it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.84it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.62it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.93it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.74it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.01it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.75it/s]
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 32513.98it/s]
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 21399.51it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 15592.21it/s]
+100%|██████████| 1/1 [00:00<00:00, 14614.30it/s]
+The following values were not passed to `accelerate launch` and had defaults used instead:
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.44it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.34it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.50it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:06,  2.17s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.35it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.31it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.47it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.29s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.32it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.29it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.81it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.61it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.51it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.77it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.57it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:00,  1.02it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  2.08it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.82it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.49it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.10it/s]
+  0%|          | 0/1813 [00:00<?, ?it/s]  0%|          | 0/1813 [00:00<?, ?it/s]  0%|          | 0/1813 [00:00<?, ?it/s]  0%|          | 0/1814 [00:00<?, ?it/s]100%|██████████| 1814/1814 [00:00<00:00, 208679.85it/s]
+100%|██████████| 1813/1813 [00:00<00:00, 186575.88it/s]
+Starting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+Starting from v4.46, the `logits` model output will have the same type as the model (except at train time, where it will always be FP32)
+ 62%|██████▏   | 1115/1813 [00:06<00:04, 172.82it/s] 59%|█████▉    | 1076/1813 [00:07<00:04, 152.91it/s] 62%|██████▏   | 1115/1813 [00:16<00:04, 172.82it/s] 59%|█████▉    | 1076/1813 [00:17<00:04, 152.91it/s] 62%|██████▏   | 1118/1813 [00:18<00:14, 47.43it/s]  60%|█████▉    | 1079/1813 [00:22<00:19, 37.60it/s]  62%|██████▏   | 1119/1813 [00:23<00:20, 33.09it/s] 60%|█████▉    | 1080/1813 [00:28<00:27, 26.53it/s] 62%|██████▏   | 1119/1813 [00:36<00:20, 33.09it/s] 62%|██████▏   | 1122/1813 [00:39<00:49, 14.08it/s] 60%|█████▉    | 1080/1813 [00:40<00:27, 26.53it/s] 60%|█████▉    | 1083/1813 [00:41<00:52, 13.82it/s] 62%|██████▏   | 1123/1813 [00:44<01:01, 11.14it/s] 60%|█████▉    | 1084/1813 [00:47<01:08, 10.57it/s] 62%|██████▏   | 1123/1813 [00:56<01:01, 11.14it/s] 62%|██████▏   | 1126/1813 [00:56<01:44,  6.56it/s] 60%|█████▉    | 1084/1813 [00:57<01:08, 10.57it/s] 60%|█████▉    | 1087/1813 [01:01<02:04,  5.83it/s] 62%|██████▏   | 1127/1813 [01:02<02:10,  5.25it/s] 60%|██████    | 1088/1813 [01:06<02:30,  4.82it/s] 62%|██████▏   | 1127/1813 [01:16<02:10,  5.25it/s] 62%|██████▏   | 1130/1813 [01:17<03:49,  2.98it/s] 60%|██████    | 1088/1813 [01:17<02:30,  4.82it/s] 60%|██████    | 1090/1813 [01:18<03:53,  3.09it/s] 62%|██████▏   | 1131/1813 [01:22<04:38,  2.45it/s] 60%|██████    | 1091/1813 [01:24<04:54,  2.45it/s] 62%|██████▏   | 1133/1813 [01:33<06:48,  1.67it/s] 60%|██████    | 1093/1813 [01:35<07:36,  1.58it/s] 63%|██████▎   | 1134/1813 [01:37<08:00,  1.41it/s] 60%|██████    | 1094/1813 [01:41<09:24,  1.27it/s] 63%|██████▎   | 1136/1813 [01:47<11:21,  1.01s/it] 60%|██████    | 1095/1813 [01:47<11:48,  1.01it/s] 63%|██████▎   | 1137/1813 [01:51<12:58,  1.15s/it] 60%|██████    | 1096/1813 [01:53<14:54,  1.25s/it] 63%|██████▎   | 1138/1813 [01:56<16:06,  1.43s/it] 61%|██████    | 1097/1813 [01:59<18:12,  1.53s/it] 63%|██████▎   | 1139/1813 [02:01<19:16,  1.72s/it] 61%|██████    | 1098/1813 [02:05<23:03,  1.94s/it] 63%|██████▎   | 1140/1813 [02:05<21:59,  1.96s/it] 63%|██████▎   | 1141/1813 [02:08<23:40,  2.11s/it] 61%|██████    | 1099/1813 [02:09<26:47,  2.25s/it] 63%|██████▎   | 1142/1813 [02:12<26:42,  2.39s/it] 61%|██████    | 1100/1813 [02:15<33:06,  2.79s/it] 63%|██████▎   | 1143/1813 [02:16<30:01,  2.69s/it] 63%|██████▎   | 1144/1813 [02:20<33:56,  3.04s/it] 61%|██████    | 1101/1813 [02:21<39:20,  3.32s/it] 63%|██████▎   | 1145/1813 [02:26<39:58,  3.59s/it] 61%|██████    | 1102/1813 [02:27<45:30,  3.84s/it] 63%|██████▎   | 1146/1813 [02:30<42:57,  3.86s/it] 61%|██████    | 1103/1813 [02:32<46:31,  3.93s/it] 63%|██████▎   | 1147/1813 [02:36<47:21,  4.27s/it] 61%|██████    | 1104/1813 [02:38<52:15,  4.42s/it] 63%|██████▎   | 1148/1813 [02:41<50:42,  4.57s/it] 61%|██████    | 1105/1813 [02:42<51:57,  4.40s/it] 63%|██████▎   | 1149/1813 [02:47<53:14,  4.81s/it] 61%|██████    | 1106/1813 [02:47<54:25,  4.62s/it] 63%|██████▎   | 1150/1813 [02:52<53:52,  4.88s/it] 61%|██████    | 1107/1813 [02:53<58:54,  5.01s/it] 63%|██████▎   | 1151/1813 [02:57<55:27,  5.03s/it] 61%|██████    | 1108/1813 [02:59<1:00:23,  5.14s/it] 64%|██████▎   | 1152/1813 [03:03<56:36,  5.14s/it] 61%|██████    | 1109/1813 [03:04<59:33,  5.08s/it]   64%|██████▎   | 1153/1813 [03:07<55:52,  5.08s/it] 61%|██████    | 1110/1813 [03:09<1:02:01,  5.29s/it] 64%|██████▎   | 1154/1813 [03:11<51:18,  4.67s/it] 61%|██████▏   | 1111/1813 [03:15<1:04:27,  5.51s/it] 64%|██████▎   | 1155/1813 [03:17<53:38,  4.89s/it] 61%|██████▏   | 1112/1813 [03:21<1:03:18,  5.42s/it] 64%|██████▍   | 1156/1813 [03:21<50:49,  4.64s/it] 64%|██████▍   | 1157/1813 [03:25<48:27,  4.43s/it] 61%|██████▏   | 1113/1813 [03:27<1:05:01,  5.57s/it] 64%|██████▍   | 1158/1813 [03:29<47:08,  4.32s/it] 61%|██████▏   | 1114/1813 [03:33<1:06:23,  5.70s/it] 64%|██████▍   | 1159/1813 [03:34<50:00,  4.59s/it] 64%|██████▍   | 1160/1813 [03:38<49:44,  4.57s/it] 62%|██████▏   | 1115/1813 [03:38<1:07:09,  5.77s/it] 64%|██████▍   | 1161/1813 [03:43<48:42,  4.48s/it] 62%|██████▏   | 1116/1813 [03:43<1:03:56,  5.50s/it] 64%|██████▍   | 1162/1813 [03:47<47:41,  4.40s/it] 62%|██████▏   | 1117/1813 [03:49<1:05:32,  5.65s/it] 64%|██████▍   | 1163/1813 [03:52<50:48,  4.69s/it] 62%|██████▏   | 1118/1813 [03:55<1:06:23,  5.73s/it] 64%|██████▍   | 1164/1813 [03:56<49:07,  4.54s/it] 64%|██████▍   | 1165/1813 [04:00<47:35,  4.41s/it] 62%|██████▏   | 1119/1813 [04:01<1:07:08,  5.81s/it] 64%|██████▍   | 1166/1813 [04:05<47:48,  4.43s/it] 62%|██████▏   | 1120/1813 [04:07<1:07:47,  5.87s/it] 64%|██████▍   | 1167/1813 [04:10<50:32,  4.69s/it] 62%|██████▏   | 1121/1813 [04:12<1:05:12,  5.65s/it] 64%|██████▍   | 1168/1813 [04:15<49:36,  4.61s/it] 62%|██████▏   | 1122/1813 [04:17<1:01:22,  5.33s/it] 64%|██████▍   | 1169/1813 [04:20<50:06,  4.67s/it] 62%|██████▏   | 1123/1813 [04:22<1:01:16,  5.33s/it] 65%|██████▍   | 1170/1813 [04:25<51:06,  4.77s/it] 62%|██████▏   | 1124/1813 [04:28<1:01:05,  5.32s/it] 65%|██████▍   | 1171/1813 [04:29<51:02,  4.77s/it] 62%|██████▏   | 1125/1813 [04:34<1:03:09,  5.51s/it] 65%|██████▍   | 1172/1813 [04:35<53:10,  4.98s/it] 62%|██████▏   | 1126/1813 [04:40<1:04:45,  5.66s/it] 65%|██████▍   | 1173/1813 [04:40<54:54,  5.15s/it] 62%|██████▏   | 1127/1813 [04:46<1:05:52,  5.76s/it] 65%|██████▍   | 1174/1813 [04:46<55:56,  5.25s/it] 65%|██████▍   | 1175/1813 [04:50<51:02,  4.80s/it] 62%|██████▏   | 1128/1813 [04:50<1:01:38,  5.40s/it] 65%|██████▍   | 1176/1813 [04:54<49:22,  4.65s/it] 62%|██████▏   | 1129/1813 [04:56<1:02:23,  5.47s/it] 65%|██████▍   | 1177/1813 [04:59<52:08,  4.92s/it] 62%|██████▏   | 1130/1813 [05:02<1:03:14,  5.56s/it] 65%|██████▍   | 1178/1813 [05:04<50:18,  4.75s/it] 62%|██████▏   | 1131/1813 [05:07<1:02:07,  5.47s/it] 65%|██████▌   | 1179/1813 [05:09<50:51,  4.81s/it] 62%|██████▏   | 1132/1813 [05:12<1:00:32,  5.33s/it] 65%|██████▌   | 1180/1813 [05:13<47:59,  4.55s/it] 62%|██████▏   | 1133/1813 [05:17<1:00:27,  5.33s/it] 65%|██████▌   | 1181/1813 [05:18<50:49,  4.83s/it] 63%|██████▎   | 1134/1813 [05:22<58:11,  5.14s/it]   65%|██████▌   | 1182/1813 [05:23<50:03,  4.76s/it] 65%|██████▌   | 1183/1813 [05:27<47:23,  4.51s/it] 63%|██████▎   | 1135/1813 [05:28<1:00:50,  5.38s/it] 65%|██████▌   | 1184/1813 [05:31<47:50,  4.56s/it] 63%|██████▎   | 1136/1813 [05:33<1:01:29,  5.45s/it] 65%|██████▌   | 1185/1813 [05:35<45:42,  4.37s/it] 63%|██████▎   | 1137/1813 [05:38<59:52,  5.31s/it]   65%|██████▌   | 1186/1813 [05:40<45:51,  4.39s/it] 63%|██████▎   | 1138/1813 [05:44<1:02:01,  5.51s/it] 65%|██████▌   | 1187/1813 [05:45<49:24,  4.74s/it] 63%|██████▎   | 1139/1813 [05:49<1:00:14,  5.36s/it] 66%|██████▌   | 1188/1813 [05:51<51:30,  4.94s/it] 66%|██████▌   | 1189/1813 [05:54<47:33,  4.57s/it] 63%|██████▎   | 1140/1813 [05:55<1:02:01,  5.53s/it] 66%|██████▌   | 1190/1813 [05:59<47:59,  4.62s/it] 63%|██████▎   | 1141/1813 [06:00<58:10,  5.19s/it]   66%|██████▌   | 1191/1813 [06:03<46:22,  4.47s/it] 63%|██████▎   | 1142/1813 [06:06<1:00:40,  5.43s/it] 66%|██████▌   | 1192/1813 [06:09<49:17,  4.76s/it] 63%|██████▎   | 1143/1813 [06:10<56:36,  5.07s/it]   66%|██████▌   | 1193/1813 [06:14<51:22,  4.97s/it] 63%|██████▎   | 1144/1813 [06:16<59:41,  5.35s/it] 66%|██████▌   | 1194/1813 [06:18<46:53,  4.54s/it] 63%|██████▎   | 1145/1813 [06:21<59:13,  5.32s/it] 66%|██████▌   | 1195/1813 [06:21<43:39,  4.24s/it] 66%|██████▌   | 1196/1813 [06:25<41:53,  4.07s/it] 63%|██████▎   | 1146/1813 [06:26<56:59,  5.13s/it] 66%|██████▌   | 1197/1813 [06:29<42:38,  4.15s/it] 63%|██████▎   | 1147/1813 [06:31<55:29,  5.00s/it] 66%|██████▌   | 1198/1813 [06:35<46:39,  4.55s/it] 63%|██████▎   | 1148/1813 [06:35<55:10,  4.98s/it] 66%|██████▌   | 1199/1813 [06:38<43:45,  4.28s/it] 63%|██████▎   | 1149/1813 [06:41<56:25,  5.10s/it] 66%|██████▌   | 1200/1813 [06:44<47:24,  4.64s/it] 63%|██████▎   | 1150/1813 [06:46<55:48,  5.05s/it] 66%|██████▌   | 1201/1813 [06:49<49:53,  4.89s/it] 63%|██████▎   | 1151/1813 [06:51<57:27,  5.21s/it] 66%|██████▋   | 1202/1813 [06:53<46:38,  4.58s/it] 64%|██████▎   | 1152/1813 [06:57<59:43,  5.42s/it] 66%|██████▋   | 1203/1813 [06:57<45:27,  4.47s/it] 66%|██████▋   | 1204/1813 [07:02<45:57,  4.53s/it] 64%|██████▎   | 1153/1813 [07:02<58:03,  5.28s/it] 66%|██████▋   | 1205/1813 [07:08<48:45,  4.81s/it] 64%|██████▎   | 1154/1813 [07:08<1:00:13,  5.48s/it] 67%|██████▋   | 1206/1813 [07:12<48:46,  4.82s/it] 64%|██████▎   | 1155/1813 [07:14<1:01:38,  5.62s/it] 67%|██████▋   | 1207/1813 [07:17<46:57,  4.65s/it] 64%|██████▍   | 1156/1813 [07:20<1:02:46,  5.73s/it] 67%|██████▋   | 1208/1813 [07:20<44:08,  4.38s/it] 64%|██████▍   | 1157/1813 [07:25<58:24,  5.34s/it]   67%|██████▋   | 1209/1813 [07:25<45:45,  4.55s/it] 64%|██████▍   | 1158/1813 [07:30<57:33,  5.27s/it] 67%|██████▋   | 1210/1813 [07:31<48:33,  4.83s/it] 64%|██████▍   | 1159/1813 [07:35<56:38,  5.20s/it] 67%|██████▋   | 1211/1813 [07:36<50:13,  5.01s/it] 64%|██████▍   | 1160/1813 [07:39<55:16,  5.08s/it] 67%|██████▋   | 1212/1813 [07:41<48:19,  4.82s/it] 67%|██████▋   | 1213/1813 [07:44<45:16,  4.53s/it] 64%|██████▍   | 1161/1813 [07:45<57:52,  5.33s/it] 67%|██████▋   | 1214/1813 [07:50<47:56,  4.80s/it] 64%|██████▍   | 1162/1813 [07:51<59:44,  5.51s/it] 67%|██████▋   | 1215/1813 [07:55<49:35,  4.98s/it] 64%|██████▍   | 1163/1813 [07:57<1:01:02,  5.63s/it] 67%|██████▋   | 1216/1813 [08:00<47:59,  4.82s/it] 64%|██████▍   | 1164/1813 [08:03<1:01:55,  5.72s/it] 67%|██████▋   | 1217/1813 [08:03<44:02,  4.43s/it] 67%|██████▋   | 1218/1813 [08:07<42:18,  4.27s/it] 64%|██████▍   | 1165/1813 [08:08<59:28,  5.51s/it]   67%|██████▋   | 1219/1813 [08:10<39:25,  3.98s/it] 64%|██████▍   | 1166/1813 [08:13<57:15,  5.31s/it] 67%|██████▋   | 1220/1813 [08:14<38:54,  3.94s/it] 64%|██████▍   | 1167/1813 [08:18<56:39,  5.26s/it] 67%|██████▋   | 1221/1813 [08:20<43:12,  4.38s/it] 64%|██████▍   | 1168/1813 [08:23<55:40,  5.18s/it] 67%|██████▋   | 1222/1813 [08:23<41:27,  4.21s/it] 67%|██████▋   | 1223/1813 [08:27<40:13,  4.09s/it] 64%|██████▍   | 1169/1813 [08:28<53:51,  5.02s/it] 68%|██████▊   | 1224/1813 [08:31<40:10,  4.09s/it] 65%|██████▍   | 1170/1813 [08:34<56:46,  5.30s/it] 68%|██████▊   | 1225/1813 [08:35<39:06,  3.99s/it] 65%|██████▍   | 1171/1813 [08:39<56:47,  5.31s/it] 68%|██████▊   | 1226/1813 [08:40<41:38,  4.26s/it] 68%|██████▊   | 1227/1813 [08:45<43:27,  4.45s/it] 65%|██████▍   | 1172/1813 [08:45<58:43,  5.50s/it] 68%|██████▊   | 1228/1813 [08:49<41:56,  4.30s/it] 65%|██████▍   | 1173/1813 [08:50<57:52,  5.43s/it] 68%|██████▊   | 1229/1813 [08:54<45:13,  4.65s/it] 65%|██████▍   | 1174/1813 [08:56<59:29,  5.59s/it] 68%|██████▊   | 1230/1813 [08:58<42:32,  4.38s/it] 65%|██████▍   | 1175/1813 [09:01<58:14,  5.48s/it] 68%|██████▊   | 1231/1813 [09:04<45:39,  4.71s/it] 68%|██████▊   | 1232/1813 [09:07<42:36,  4.40s/it] 65%|██████▍   | 1176/1813 [09:07<59:49,  5.64s/it] 68%|██████▊   | 1233/1813 [09:13<45:20,  4.69s/it] 65%|██████▍   | 1177/1813 [09:13<1:00:44,  5.73s/it] 68%|██████▊   | 1234/1813 [09:17<42:56,  4.45s/it] 65%|██████▍   | 1178/1813 [09:19<1:01:22,  5.80s/it] 68%|██████▊   | 1235/1813 [09:20<41:19,  4.29s/it] 65%|██████▌   | 1179/1813 [09:24<57:12,  5.41s/it]   68%|██████▊   | 1236/1813 [09:26<44:22,  4.61s/it] 65%|██████▌   | 1180/1813 [09:29<55:24,  5.25s/it] 68%|██████▊   | 1237/1813 [09:29<41:39,  4.34s/it] 68%|██████▊   | 1238/1813 [09:33<40:16,  4.20s/it] 65%|██████▌   | 1181/1813 [09:35<57:28,  5.46s/it] 68%|██████▊   | 1239/1813 [09:37<39:35,  4.14s/it] 65%|██████▌   | 1182/1813 [09:40<58:25,  5.56s/it] 68%|██████▊   | 1240/1813 [09:42<40:17,  4.22s/it] 65%|██████▌   | 1183/1813 [09:45<56:17,  5.36s/it] 68%|██████▊   | 1241/1813 [09:47<42:57,  4.51s/it] 69%|██████▊   | 1242/1813 [09:51<41:41,  4.38s/it] 65%|██████▌   | 1184/1813 [09:51<58:08,  5.55s/it] 69%|██████▊   | 1243/1813 [09:56<44:29,  4.68s/it] 65%|██████▌   | 1185/1813 [09:57<59:15,  5.66s/it][rank0]:[E1002 02:21:26.866113943 ProcessGroupNCCL.cpp:607] [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=2, OpType=ALLGATHER, NumelIn=1, NumelOut=4, Timeout(ms)=600000) ran for 600091 milliseconds before timing out.
+[rank0]:[E1002 02:21:26.866642922 ProcessGroupNCCL.cpp:1664] [PG 0 (default_pg) Rank 0] Exception (either an error or timeout) detected by watchdog at work: 2, last enqueued NCCL work: 2, last completed NCCL work: 1.
+[rank2]:[E1002 02:21:26.867609038 ProcessGroupNCCL.cpp:607] [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=2, OpType=ALLGATHER, NumelIn=1, NumelOut=4, Timeout(ms)=600000) ran for 600092 milliseconds before timing out.
+[rank2]:[E1002 02:21:26.868073693 ProcessGroupNCCL.cpp:1664] [PG 0 (default_pg) Rank 2] Exception (either an error or timeout) detected by watchdog at work: 2, last enqueued NCCL work: 2, last completed NCCL work: 1.
+[rank2]:[E1002 02:21:26.332827543 ProcessGroupNCCL.cpp:1709] [PG 0 (default_pg) Rank 2] Timeout at NCCL work: 2, last enqueued NCCL work: 2, last completed NCCL work: 1.
+[rank2]:[E1002 02:21:26.332879085 ProcessGroupNCCL.cpp:621] [Rank 2] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank2]:[E1002 02:21:26.332891447 ProcessGroupNCCL.cpp:627] [Rank 2] To avoid data inconsistency, we are taking the entire process down.
+[rank2]:[E1002 02:21:26.334151875 ProcessGroupNCCL.cpp:1515] [PG 0 (default_pg) Rank 2] Process group watchdog thread terminated with exception: [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=2, OpType=ALLGATHER, NumelIn=1, NumelOut=4, Timeout(ms)=600000) ran for 600092 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:609 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7fbfabb77f86 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x7fbfacdc88f2 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x7fbfacdcf333 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x7fbfacdd171c in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xd3b75 (0x7fbffaadeb75 in /home/qinchuan/miniconda3/envs/py312/bin/../lib/libstdc++.so.6)
+frame #5: <unknown function> + 0x94b43 (0x7fbffba37b43 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126a00 (0x7fbffbac9a00 in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG 0 (default_pg) Rank 2] Process group watchdog thread terminated with exception: [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=2, OpType=ALLGATHER, NumelIn=1, NumelOut=4, Timeout(ms)=600000) ran for 600092 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:609 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7fbfabb77f86 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x7fbfacdc88f2 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x7fbfacdcf333 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x7fbfacdd171c in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xd3b75 (0x7fbffaadeb75 in /home/qinchuan/miniconda3/envs/py312/bin/../lib/libstdc++.so.6)
+frame #5: <unknown function> + 0x94b43 (0x7fbffba37b43 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126a00 (0x7fbffbac9a00 in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1521 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7fbfabb77f86 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe5aa84 (0x7fbfaca5aa84 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0xd3b75 (0x7fbffaadeb75 in /home/qinchuan/miniconda3/envs/py312/bin/../lib/libstdc++.so.6)
+frame #3: <unknown function> + 0x94b43 (0x7fbffba37b43 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #4: <unknown function> + 0x126a00 (0x7fbffbac9a00 in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[E1002 02:21:26.623419716 ProcessGroupNCCL.cpp:1709] [PG 0 (default_pg) Rank 0] Timeout at NCCL work: 2, last enqueued NCCL work: 2, last completed NCCL work: 1.
+[rank0]:[E1002 02:21:26.623452332 ProcessGroupNCCL.cpp:621] [Rank 0] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank0]:[E1002 02:21:26.623459456 ProcessGroupNCCL.cpp:627] [Rank 0] To avoid data inconsistency, we are taking the entire process down.
+[rank0]:[E1002 02:21:26.624749706 ProcessGroupNCCL.cpp:1515] [PG 0 (default_pg) Rank 0] Process group watchdog thread terminated with exception: [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=2, OpType=ALLGATHER, NumelIn=1, NumelOut=4, Timeout(ms)=600000) ran for 600091 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:609 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f9859177f86 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x7f980b7c88f2 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x7f980b7cf333 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x7f980b7d171c in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xd3b75 (0x7f985997cb75 in /home/qinchuan/miniconda3/envs/py312/bin/../lib/libstdc++.so.6)
+frame #5: <unknown function> + 0x94b43 (0x7f985a62bb43 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126a00 (0x7f985a6bda00 in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG 0 (default_pg) Rank 0] Process group watchdog thread terminated with exception: [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=2, OpType=ALLGATHER, NumelIn=1, NumelOut=4, Timeout(ms)=600000) ran for 600091 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:609 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f9859177f86 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x7f980b7c88f2 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x7f980b7cf333 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x7f980b7d171c in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xd3b75 (0x7f985997cb75 in /home/qinchuan/miniconda3/envs/py312/bin/../lib/libstdc++.so.6)
+frame #5: <unknown function> + 0x94b43 (0x7f985a62bb43 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126a00 (0x7f985a6bda00 in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1521 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f9859177f86 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe5aa84 (0x7f980b45aa84 in /home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0xd3b75 (0x7f985997cb75 in /home/qinchuan/miniconda3/envs/py312/bin/../lib/libstdc++.so.6)
+frame #3: <unknown function> + 0x94b43 (0x7f985a62bb43 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #4: <unknown function> + 0x126a00 (0x7f985a6bda00 in /lib/x86_64-linux-gnu/libc.so.6)
+
+W1002 02:21:26.884000 140168042304576 torch/distributed/elastic/multiprocessing/api.py:858] Sending process 3754091 closing signal SIGTERM
+W1002 02:21:26.885000 140168042304576 torch/distributed/elastic/multiprocessing/api.py:858] Sending process 3754092 closing signal SIGTERM
+W1002 02:21:26.886000 140168042304576 torch/distributed/elastic/multiprocessing/api.py:858] Sending process 3754094 closing signal SIGTERM
+E1002 02:21:27.485000 140168042304576 torch/distributed/elastic/multiprocessing/api.py:833] failed (exitcode: -6) local_rank: 2 (pid: 3754093) of binary: /home/qinchuan/miniconda3/envs/py312/bin/python
+Traceback (most recent call last):
+  File "/home/qinchuan/miniconda3/envs/py312/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1165, in launch_command
+    multi_gpu_launcher(args)
+  File "/home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/accelerate/commands/launch.py", line 799, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/qinchuan/miniconda3/envs/py312/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+========================================================
+1.llm_select.py FAILED
+--------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+--------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-10-02_02:21:26
+  host      : 3090x8
+  rank      : 2 (local_rank: 2)
+  exitcode  : -6 (pid: 3754093)
+  error_file: <N/A>
+  traceback : Signal 6 (SIGABRT) received by PID 3754093
+========================================================

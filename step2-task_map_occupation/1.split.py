@@ -43,6 +43,6 @@ df_task = df[df['task'].apply(len)>0].explode('task')
 df_task = df_task.drop_duplicates('task')
 df_task.to_csv(f'outputs/{args.dataset_name}/job_task.csv', index=None, sep='\t')
 
-df = df[['title', 'task']]
-df.columns = ['title', 'description']
-df.to_csv(f'outputs/{args.dataset_name}/title_task.csv', index=None, sep='\t')
+# df = df[['title', 'task']]
+# df.columns = ['title', 'description']
+# df.to_csv(f'outputs/{args.dataset_name}/title_task.csv', index=None, sep='\t')
