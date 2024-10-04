@@ -17,7 +17,8 @@ if not os.path.exists(f'outputs/{args.dataset_name}'):
     os.makedirs(f'outputs/{args.dataset_name}')
 
 df = pd.read_csv(f'data/{args.dataset_name}/job_description.csv', sep='\t')
-df['task'] = df['job_description'].progress_apply(task_extraction.extract_tasks_from_eu_description)
+
+df['task'] = df['job_description'].progress_apply(task_extraction.extract_tasks_from_description)
 df['len'] = df['task'].apply(len)
 df = df.sort_values('len', ascending=False)
 
