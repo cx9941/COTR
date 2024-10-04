@@ -4,11 +4,7 @@ from transformers import BertTokenizer, BertModel
 import re
 from tqdm import tqdm
 tqdm.pandas()
-import argparse
-parser = argparse.ArgumentParser()
-parser.add_argument('--dataset_name', default='jp')
-parser.add_argument('--device', default='cuda')
-args = parser.parse_args()
+from config import args
 from utils import Task_Extraction
 
 task_extraction = Task_Extraction(args.dataset_name)
