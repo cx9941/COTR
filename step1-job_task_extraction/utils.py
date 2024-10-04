@@ -11,7 +11,7 @@ class Task_Extraction():
             "fr": ["Responsabilité", "Responsable", "responsabilités", "Activités", 'à faire concrètement dans', "attentes", "devoir", 'SOMMAIRE DES FONCTIONS','aurez principalement à', 'le titulaire', 'il aura à', 'fonctions', 'responsabilités', 'Plus précisément', 'tâches','Rôle'],
             "eu": ['Responsibilities','responsible','Responsibilties','Activities','expectations','Duties', 'role'],
             "en": ['Responsibilities','responsible','Responsibilties','Activities','expectations','Duties', 'role'],
-            "jp": ['職責', '勤務内容', '業務内容','仕事内容','作業内容','オープニング募集','担当業務の流れ','主なサービス内容','業務', 'ロール＃ロール＃'],
+            "jp": ['職責', '勤務内容', '業務内容','仕事内容','作業内容','オープニング募集','担当業務の流れ','主なサービス内容','業務','お任せしたいこと', 'ロール＃ロール＃'],
         }
 
         self.task_must_words = {
@@ -30,7 +30,7 @@ class Task_Extraction():
         }
         self.s_word_list = {
             "fr": [':', '\?', '：', '？'],
-            "jp": [':', '\?', '：', '？', '】', '【', '★'],
+            "jp": [':', '\?', '：', '？', '】', '【', '★', '■', '＞', '＜', '◆', '・', 'ー', '◼︎'],
             "en": [':', '\?', '：', '？'],
             "eu": [':', '\?', '：', '？']
         }
@@ -52,7 +52,6 @@ class Task_Extraction():
             return True
         return False
 
-    
     def end_symbol(self, line):
         if any(s_word in line for s_word in self.s_word_list):
             return True
@@ -60,7 +59,6 @@ class Task_Extraction():
             return len(line) < 6
         else:
             return len(line.split(' ')) < 4
-
 
     def extract_tasks_from_description_step1(self, text):
         # Step 1: Split the text into lines
@@ -89,8 +87,8 @@ class Task_Extraction():
             # Match lines starting with special symbols (e.g., -, *, •, numbers followed by .)
             match = re.match(self.special_word_match, line)
 
-            if any(s_word in line for s_word in self.s_word_list):
-                break
+            # if any(s_word in line for s_word in self.s_word_list):
+            #     break
             
             if match:
                 if special_symbol is None:
@@ -102,19 +100,25 @@ class Task_Extraction():
                 # Only collect lines that match the detected special symbol
                 if len(special_symbol)<=4 and re.match(f'^{special_symbol}\s*', line):
                     # Remove the special symbol and add the task description
-                    task = re.sub(f'^{special_symbol}\s*', '', line)
-                    task_list.append(task)
+                    # task = re.sub(f'^{special_symbol}\s*', '', line)
+                    task = line.split(special_symbol)
+                    task = self.filter_task(task)
+                    task_list += task
                 else:
                     break  # Stop if we encounter a line without the special symbol
-            elif special_symbol:
+            else:
                 # Stop if the line doesn't match the special symbol pattern and we already found tasks
                 break
 
-        if len(task_list) == 0:
-            task_list = self.extract_tasks_from_description_step1('\n'.join(lines[responsibilities_start+1:]))
+        new_task_list = self.extract_tasks_from_description_step1('\n'.join(lines[responsibilities_start+1:]))
+
+        task_list = new_task_list if len(new_task_list) > len(task_list) else task_list
+
+        # if len(task_list) == 1:
+        #     task_list = task_list[0].split(special_symbol)
 
         return task_list
-    
+
     def extract_tasks_from_description_step2(self, text):
         # Step 1: Split the text into lines
         lines = [i.strip(' ').replace('\ufeff', '')for i in text.splitlines()]
@@ -141,16 +145,23 @@ class Task_Extraction():
 
         return task_list
 
-    def filter_task(self, text):
-        if text.startswith('.'):
-            text = text[1:]
-        return text.strip(' ')
+
+    def filter_task(self, task_list):
+        ans = []
+        for line in task_list:
+            if line.startswith('.'):
+                line = line[1:]
+            line = line.strip(' ')
+            if ('jp' in self.dataset_name and len(line) <= 2) or ('jp' not in self.dataset_name and len(line.split(' ')) <= 4):
+                continue
+            ans.append(line)
+        return ans
     
     def extract_tasks_from_description(self, text):
         task_list = self.extract_tasks_from_description_step1(text)
         if len(task_list) == 0:
             task_list = self.extract_tasks_from_description_step2(text)
-        task_list = [self.filter_task(i) for i in task_list]
+        task_list = self.filter_task(task_list)
         return task_list
 
     
