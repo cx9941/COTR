@@ -6,8 +6,8 @@ outputs
 nohup.out
 gabarage
 extra*
-*raw_data*
+raw_data
 llms
 .DS_Store
-data
 results
+en
