@@ -5,51 +5,85 @@ import re
 from tqdm import tqdm
 tqdm.pandas()
 
+task_keywords = {
+    "fr": ["Responsabilité", "Responsable", "responsabilités", "Activités", 'à faire concrètement dans', "attentes", "devoir", 'SOMMAIRE DES FONCTIONS','aurez principalement à', 'le titulaire', 'il aura à', 'fonctions', 'responsabilités', 'Plus précisément', 'tâches','Rôle'],
+    "eu": ['Responsibilities','responsible','Responsibilties','Activities','expectations','Duties', 'role'],
+    "en": ['Responsibilities','responsible','Responsibilties','Activities'],
+    "jp": ['勤務内容', '業務内容','仕事内容','作業内容','主なサービス内容'],
+}
+
+task_symbolwords = {
+    "en": [':'],
+    "eu": [':'],
+    "fr": [':'],
+    "jp": [':', '：', '\n'],
+}
+
+task_must_words = {
+    "fr": [],
+    "eu": [],
+    "en": [],
+    "jp": ['以下業務'],
+}
+
+symbol_line = {
+    "fr": [],
+    "jp": ["*", "·", '★', '■', '◆', '・', 'ー', '◼︎', '-'],
+    "en": ["*", "·", '★', '■', '◆', '・', 'ー', '◼︎', '-'],
+    "eu": [],
+}
+
+stopwords = {
+    "fr": [],
+    "jp": [':', '：', '【', '\n\s*\n', '必須スキル'],
+    "en": [':', '\n', 'Requirements', 'Qualifications'],
+    "eu": [],
+}
+
+splitwords = {
+    "fr": [],
+    # "jp": ['。', '\n'],
+    "jp": ["*", '★', '■', '◆', 'ー ',' ー', '◼︎',  '。', '\n', '◇'],
+    "en": ['.', ';', '*', '—', '·', '–', '\n', '•', '●', '-'],
+    "eu": [],
+}
+special_word_match = {
+    "fr": r'([^a-zA-ZàâäèéêëîïôœùûüÿçÀÂÄÈÉÊËÎÏÔŒÙÛÜŸÇ]+)\s*',
+    "jp": r'([^\u3040-\u30FF\u4E00-\u9FFFa-zA-Z]|[・ー])+\s*',
+    "en": r'^([\W\d]+)\s*',
+    "eu": r'^([\W\d]+)\s*',
+}
+s_word_list = {
+    "fr": [':', '\?', '：', '？'],
+    "jp": [':', '\?', '：', '？', '】', '【', '★', '■', '＞', '＜', '◆', '・', 'ー', '◼︎'],
+    "en": [':', '\?', '：', '？'],
+    "eu": [':', '\?', '：', '？']
+}
+
 class Task_Extraction():
     def __init__(self, dataset_name):
-        self.task_start_words = {
-            "fr": ["Responsabilité", "Responsable", "responsabilités", "Activités", 'à faire concrètement dans', "attentes", "devoir", 'SOMMAIRE DES FONCTIONS','aurez principalement à', 'le titulaire', 'il aura à', 'fonctions', 'responsabilités', 'Plus précisément', 'tâches','Rôle'],
-            "eu": ['Responsibilities','responsible','Responsibilties','Activities','expectations','Duties', 'role'],
-            "en": ['Responsibilities','responsible','Responsibilties','Activities','expectations','Duties', 'role'],
-            "jp": ['職責', '勤務内容', '業務内容','仕事内容','作業内容','オープニング募集','担当業務の流れ','主なサービス内容','業務','お任せしたいこと', 'ロール＃ロール＃'],
-        }
-
-        self.task_must_words = {
-            "fr": [],
-            "eu": [],
-            "en": [],
-            "jp": ['以下業務'],
-        }
-
-
-        self.special_word_match = {
-            "fr": r'([^a-zA-ZàâäèéêëîïôœùûüÿçÀÂÄÈÉÊËÎÏÔŒÙÛÜŸÇ]+)\s*',
-            "jp": r'([^\u3040-\u30FF\u4E00-\u9FFFa-zA-Z]|[・ー])+\s*',
-            "en": r'^([\W\d]+)\s*',
-            "eu": r'^([\W\d]+)\s*',
-        }
-        self.s_word_list = {
-            "fr": [':', '\?', '：', '？'],
-            "jp": [':', '\?', '：', '？', '】', '【', '★', '■', '＞', '＜', '◆', '・', 'ー', '◼︎'],
-            "en": [':', '\?', '：', '？'],
-            "eu": [':', '\?', '：', '？']
-        }
         self.dataset_name = dataset_name
-        self.task_start_words = self.task_start_words[dataset_name]
-        self.special_word_match = self.special_word_match[dataset_name]
-        self.s_word_list = self.s_word_list[dataset_name]
+        self.task_keywords = task_keywords[dataset_name]
+        self.symbol_line = symbol_line[dataset_name]
+        self.splitwords = splitwords[dataset_name]
+        self.stopwords = stopwords[dataset_name]
+        self.task_must_words = task_must_words[dataset_name]
+        self.special_word_match = special_word_match[dataset_name]
+        self.task_symbolwords = task_symbolwords[dataset_name]
+        self.s_word_list = s_word_list[dataset_name]
 
         self.action_verbs = ["Prepare", "Organize", "Design", "Lead", "Complete", "Participate", "Managing", "Track", "Plan", "Communicate", "Manage"] + ["Manage", "Develop", "Plan", "Coordinate", "Implement", "Prepare", "Organize", "Oversee", "Lead", "Execute", "Support", "Monitor", "Receive", "Maintain"]
         self.action_verbs = list(set(self.action_verbs))
         self.keywords = ["develop", "prepare", "coordinate", "oversee", "lead", "support","is commited to"]
 
     def start_symbol(self, line):
-        task_start = '|'.join(self.task_start_words[:-1])
+        task_start = '|'.join(self.task_keywords)
         if len(re.findall(rf'{task_start}', line, re.IGNORECASE)) > 0 and any(s_word in line for s_word in self.s_word_list):
             return True
-        task_must = '|'.join(self.task_must_words)
-        if len(re.findall(rf'{task_must}', line, re.IGNORECASE)) > 0:
-            return True
+        if len(self.task_must_words) > 0:
+            task_must = '|'.join(self.task_must_words)
+            if len(re.findall(rf'{task_must}', line, re.IGNORECASE)) > 0:
+                return True
         return False
 
     def end_symbol(self, line):
@@ -59,8 +93,42 @@ class Task_Extraction():
             return len(line) < 6
         else:
             return len(line.split(' ')) < 4
+        
 
-    def extract_tasks_from_description_step1(self, text):
+    def extract_tasks_from_description_en(self, text):
+        keyword_pattern = r"|".join(self.task_keywords)
+        split_pattern = "".join([re.escape(word) for word in self.splitwords])
+        stop_pattern = r"|".join(self.stopwords)
+        task_pattern = "".join(self.task_symbolwords)
+        # pattern = rf"(?:{keyword_pattern}).{{0,20}}{task_pattern}(.*?[{split_pattern}]).*?(?={stop_pattern})"
+        pattern = rf"(?:{keyword_pattern}).{{0,20}}[{task_pattern}].{{0,20}}[{split_pattern}]\s*(.*?)(?={stop_pattern})"
+
+        matches = re.findall(pattern, text, re.IGNORECASE)
+        if len(matches) > 0:
+            ans = [j for i in matches for j in re.split(r'\.|;|\*|—|\n|·|–', i)]
+        else:
+            ans = []
+        return ans
+
+    def extract_tasks_from_description_jp(self, text):
+        # text = re.sub(r'\n\s+', '\n', text)
+        keyword_pattern = r"|".join(self.task_keywords)
+        split_pattern = "".join([re.escape(word) for word in self.splitwords])
+        stop_pattern = r"|".join(self.stopwords)
+        task_pattern = "".join(self.task_symbolwords)
+        # pattern = rf"(?:{keyword_pattern}).{{0,1}}[{task_pattern}].{{0,9}}(.*?[{split_pattern}]).*?(?={stop_pattern})"
+        pattern = rf"(?:{keyword_pattern}).{{0,1}}[{task_pattern}].{{0,9}}[{split_pattern}]\s*(.*?)(?={stop_pattern})"
+        
+        matches = re.findall(pattern, text, re.IGNORECASE| re.DOTALL)
+
+        split_pattern = "|".join([re.escape(word) for word in self.splitwords])
+        if len(matches) > 0:
+            ans = [j for i in matches for j in re.split(split_pattern, i)]
+        else:
+            ans = []
+        return ans
+
+    def extract_tasks_from_description_eu(self, text):
         # Step 1: Split the text into lines
         lines = [i.strip(' ').replace('\ufeff', '')for i in text.splitlines()]
         lines = [i for i in lines if len(i)>0]
@@ -85,7 +153,7 @@ class Task_Extraction():
             #     line = line.replace(sub, '')
             
             # Match lines starting with special symbols (e.g., -, *, •, numbers followed by .)
-            match = re.match(self.special_word_match, line)
+            match = re.match(self.special_word_match, line[:1])
 
             # if any(s_word in line for s_word in self.s_word_list):
             #     break
@@ -110,23 +178,22 @@ class Task_Extraction():
                 # Stop if the line doesn't match the special symbol pattern and we already found tasks
                 break
 
-        new_task_list = self.extract_tasks_from_description_step1('\n'.join(lines[responsibilities_start+1:]))
+        new_task_list = self.extract_tasks_from_description_eu('\n'.join(lines[responsibilities_start+1:]))
 
         task_list = new_task_list if len(new_task_list) > len(task_list) else task_list
 
-        # if len(task_list) == 1:
-        #     task_list = task_list[0].split(special_symbol)
+        if len(task_list) == 1:
+            task_list = task_list[0].split(special_symbol)
 
         return task_list
 
-    def extract_tasks_from_description_step2(self, text):
+    def extract_tasks_from_description_eu2(self, text):
         # Step 1: Split the text into lines
         lines = [i.strip(' ').replace('\ufeff', '')for i in text.splitlines()]
         lines = [i for i in lines if len(i)>0]
 
         # Step 2: Find the line with 'Responsibilities'
         responsibilities_start = None
-        task_start = '|'.join(self.task_start_words)
         for i, line in enumerate(lines):
             if self.start_symbol(line):
                 responsibilities_start = i
@@ -145,7 +212,6 @@ class Task_Extraction():
 
         return task_list
 
-
     def filter_task(self, task_list):
         ans = []
         for line in task_list:
@@ -158,9 +224,14 @@ class Task_Extraction():
         return ans
     
     def extract_tasks_from_description(self, text):
-        task_list = self.extract_tasks_from_description_step1(text)
-        if len(task_list) == 0:
-            task_list = self.extract_tasks_from_description_step2(text)
+        if self.dataset_name in ['en']:
+            task_list = self.extract_tasks_from_description_en(text)
+        elif self.dataset_name in ['jp']:
+            task_list = self.extract_tasks_from_description_jp(text)
+        elif self.dataset_name in ['eu']:
+            task_list = self.extract_tasks_from_description_eu(text)
+            if len(task_list) == 0:
+                task_list = self.extract_tasks_from_description_eu2(text)
         task_list = self.filter_task(task_list)
         return task_list
 

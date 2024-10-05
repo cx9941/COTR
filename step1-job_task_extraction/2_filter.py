@@ -26,7 +26,7 @@ if 'jp' in args.dataset_name:
 else:
     filter_df['task_len'] = filter_df['task'].apply(lambda x: len(x.split(' ')))
 filter_df = filter_df.sort_values('task_len', ascending=False)
-filter_df = filter_df[(filter_df['task_len']>3) & (filter_df['task_len']<50)]
+filter_df = filter_df[(filter_df['task_len']>5) & (filter_df['task_len']<100)]
 filter_df
 
 # %%
@@ -34,5 +34,6 @@ if not os.path.exists(f'results/{args.dataset_name}'):
     os.makedirs(f'results/{args.dataset_name}')
 filter_df.to_csv(f'results/{args.dataset_name}/job_re_description.csv', index=None, sep='\t')
 filter_df.to_excel(f'results/{args.dataset_name}/{args.dataset_name}-job_re_description.xlsx', index=None)
+print('num of filer task', len(filter_df))
 
 
