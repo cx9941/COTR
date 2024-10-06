@@ -26,7 +26,7 @@ if 'jp' in args.dataset_name:
 else:
     filter_df['task_len'] = filter_df['task'].apply(lambda x: len(x.split(' ')))
 filter_df = filter_df.sort_values('task_len', ascending=False)
-filter_df = filter_df[(filter_df['task_len']>5) & (filter_df['task_len']<100)]
+filter_df = filter_df[(filter_df['task_len']>5)]
 filter_df
 
 # %%

@@ -11,3 +11,6 @@ llms
 .DS_Store
 results
 en
+CoBERT
+raw_data
+data
