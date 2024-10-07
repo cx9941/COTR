@@ -3,18 +3,24 @@ import pandas as pd
 import os
 from config import args
 import re
-# 读取源文件
+from tqdm import tqdm
 all_data_task_topk = pd.read_csv(f'{args.input_dir}/task_candidate.csv', sep='\t').reset_index()
 # 读取输出文件
 final_ans = {'index':[], 'task': []}
-for i in os.listdir(args.output_dir):
+for i in tqdm(os.listdir(args.output_dir)):
     idx = int(re.findall(r'\d+', i)[0])
     text = open(f"{args.output_dir}/{idx}.txt", 'r').read()
     content = text[text.find('<|start_header_id|>assistant<|end_header_id|>'):]
     ans = re.findall(r'\d\.+(.*?)\n', content)
-    results = [re.sub(r'\d+\.', '', i).strip(' ') for i in ans]
     candidates = [all_data_task_topk[f'task{_}'][idx].strip(' ') for _ in range(100)]
-    results = [_ for _ in results if _ in candidates]
+    results = []
+    # rgex = '|'.join([_ for _ in  candidates])
+    # results = re.findall(rf"{rgex}", content)
+    for line in content.split('\n'):
+        for can in candidates:
+            if can in line:
+                results.append(can)
+                break
     if len(results) != 10:
         continue
     final_ans['task'].append(results)

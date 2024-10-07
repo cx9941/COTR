@@ -1,6 +1,6 @@
 import torch
 import pandas as pd
-from transformers import BertTokenizer
+from transformers import AutoTokenizer
 from config import get_args
 from model import BERTForTextMatching
 from dataset import create_data_loader
@@ -12,10 +12,10 @@ def main():
     args = get_args()
 
     # Tokenizer
-    tokenizer = BertTokenizer.from_pretrained(args.bert_model)
+    tokenizer = AutoTokenizer.from_pretrained(args.bert_model)
 
     # Data loader
-    train_loader, eval_job, eval_task = create_data_loader(tokenizer, args.max_len, args.batch_size)
+    train_loader, eval_job, eval_task = create_data_loader(tokenizer, args.max_len, args.batch_size, args.dataset_name, args.mode)
 
     # Models
     job_model = BERTForTextMatching(args.bert_model).to(args.device)

@@ -70,7 +70,7 @@ class Trainer:
                 all_job_embeddings.append(job_embeddings)
                 all_labels.append(label)
 
-            for batch, label in tqdm(eval_task):
+            for batch in tqdm(eval_task):
                 input_ids = batch['input_ids'].to(self.device)
                 attention_mask = batch['attention_mask'].to(self.device)
                 task_embeddings = self.task_model(input_ids, attention_mask)
@@ -110,6 +110,6 @@ class Trainer:
         all_task_embeddings = torch.concat(all_task_embeddings).detach().cpu().numpy()
         
         similarity_matrix = cosine_similarity_matrix(all_job_embeddings, all_task_embeddings)
-        rankings = get_ranking(similarity_matrix)
+        rankings, sort_similarity_matrix = get_ranking(similarity_matrix)
 
-        return rankings
+        return sort_similarity_matrix, rankings

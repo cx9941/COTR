@@ -1,10 +1,10 @@
 import torch
-from transformers import BertModel
+from transformers import AutoModel
 
 class BERTForTextMatching(torch.nn.Module):
     def __init__(self, model_name):
         super(BERTForTextMatching, self).__init__()
-        self.bert = BertModel.from_pretrained(model_name)
+        self.bert = AutoModel.from_pretrained(model_name)
         self.dropout = torch.nn.Dropout(0.3)
         self.fc = torch.nn.Linear(self.bert.config.hidden_size, 128)  # Embedding size to 128
 

@@ -11,7 +11,8 @@ def cosine_similarity_matrix(jobs, tasks):
 # 获取排名
 def get_ranking(similarity_matrix):
     rankings = np.argsort(-similarity_matrix, axis=1)  # 从大到小排序
-    return rankings
+    sort_similarity_matrix = -np.sort(-similarity_matrix, axis=1)
+    return rankings, sort_similarity_matrix
 
 def compute_metrics(rankings, labels, k_values=[1, 3, 5, 10, 20]):
     num_jobs = len(labels)
@@ -42,7 +43,7 @@ def calculate_recall_precision_hits(all_job_embeddings, all_task_embeddings, all
     similarity_matrix = cosine_similarity_matrix(all_job_embeddings, all_task_embeddings)
     
     # Step 2: 获取排名
-    rankings = get_ranking(similarity_matrix)
+    rankings, sort_similarity_matrix = get_ranking(similarity_matrix)
     
     # Step 3: 计算 recall, precision 和 hits
     recall_scores, precision_scores, hit_scores = compute_metrics(rankings, all_labels, k_values=[1, 3, 5, 10, 20, 50, 100, 200])
