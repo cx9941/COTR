@@ -1,0 +1,108 @@
+Now given 100 specific task descriptions and 1 specific position, 
+0.Promote products, activities, or organizations.
+1.Administer personnel recruitment or hiring activities.
+2.Interview others for news or entertainment purposes.
+3.Direct medical science or healthcare programs.
+4.Conduct eligibility or selection interviews.
+5.Present information to the public.
+6.Develop business relationships.
+7.Assist practitioners to perform medical procedures.
+8.Participate in staffing decisions.
+9.Maintain professional knowledge or certifications.
+10.Recruit personnel.
+11.Promote products, services, or programs.
+12.Hire personnel.
+13.Plan employee work schedules.
+14.Interview witnesses, suspects, or claimants.
+15.Supervise clerical or administrative personnel.
+16.Evaluate potential problems in home or work environments of clients.
+17.Document client health or progress.
+18.Update job related knowledge or skills.
+19.Provide legal advice to clients.
+20.Direct productions or performances.
+21.Develop collaborative relationships between departments or with external organizations.
+22.Assess skin or hair conditions.
+23.Instruct staff in work policies or procedures.
+24.Advise others on human resources topics.
+25.Advise others on matters of public policy.
+26.Interview people to obtain information about actions or status of individuals.
+27.Examine mouth, teeth, gums, or related facial structures.
+28.Prepare employee work schedules.
+29.Provide care for animals.
+30.Evaluate program effectiveness.
+31.Resolve interpersonal conflicts.
+32.Supervise activities of other legal personnel.
+33.Interview claimants to get information related to legal proceedings.
+34.Interview clients to gather financial information.
+35.Establish interpersonal business relationships to facilitate work activities.
+36.Intervene in crisis situations to assist clients.
+37.Perform for recordings.
+38.Guide patrons on tours.
+39.Accompany patients or clients on outings to provide assistance.
+40.Prepare proposals or grant applications to obtain project funding.
+41.Diagnose medical conditions.
+42.Evaluate employee performance.
+43.Evaluate performance of applicants, trainees, or employees.
+44.Manage organizational or program finances.
+45.Prepare patients physically for medical procedures.
+46.Represent the interests of clients in legal proceedings.
+47.Interview patients to gather medical information.
+48.Arbitrate disputes between parties to resolve legal conflicts.
+49.Perform dances.
+50.Collaborate with outside groups to develop programs or projects.
+51.Test patient vision.
+52.Develop plans for programs or services.
+53.Measure the physical or physiological attributes of patients.
+54.Interpret cultural or religious information for others.
+55.Manage healthcare operations.
+56.Analyze test data or images to inform diagnosis or treatment.
+57.Explain medical procedures or test results to patients or family members.
+58.Administer oaths to court participants.
+59.Apply bandages, dressings, or splints.
+60.Maintain medical or professional knowledge.
+61.Update professional knowledge.
+62.Report news to the public.
+63.Provide information to the general public.
+64.Testify at legal or legislative proceedings.
+65.Assign duties or work schedules to employees.
+66.Treat animal injuries or illnesses.
+67.Direct fundraising or financing activities.
+68.Perform clerical work in medical settings.
+69.Supervise service workers.
+70.Monitor nutrition related activities of individuals or groups.
+71.Evaluate civic projects or public policies.
+72.Communicate detailed medical information to patients or family members.
+73.Plan special events.
+74.Supervise medical support personnel.
+75.Record patient medical histories.
+76.Accompany individuals or groups to activities.
+77.Advise others on legal or regulatory compliance matters.
+78.Care for animals.
+79.Provide medical or cosmetic advice for clients.
+80.Assist healthcare practitioners during surgery.
+81.Schedule medical facility use.
+82.Edit written materials.
+83.Order medical diagnostic or clinical tests.
+84.Assist clients in handling details of daily life.
+85.Help clients get needed services or resources.
+86.Interview people to gather information about criminal activities.
+87.Advise others on health and safety issues.
+88.Coordinate cross-disciplinary research programs.
+89.Count prison inmates or personnel.
+90.Coordinate artistic activities.
+91.Recommend legal actions.
+92.Confer with court staff to clarify information.
+93.Conduct diagnostic tests to determine patient health.
+94.Conduct surveys in organizations.
+95.Administer standardized physical or psychological tests.
+96.Develop health assessment methods or programs.
+97.Treat dental problems or diseases.
+98.Advise others on financial matters.
+99.Evaluate treatment options to guide medical decisions.
+corresponding responsibilities:
+Build, maintain and manage important client relationships
+Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). 
+Please strictly follow the following format for your answer: 
+1.xxxx. (Task x)
+2.xxxx. (Task x)
+3.xxxx. (Task x)

@@ -1,0 +1,108 @@
+Now given 100 specific task descriptions and 1 specific position, 
+0.Perform administrative or clerical tasks.
+1.Confer with managers to make operational decisions.
+2.Develop organizational methods or procedures.
+3.Develop operating strategies, plans, or procedures.
+4.Schedule appointments with prospective customers.
+5.Interpret research or operational data.
+6.Prepare informational or reference materials.
+7.Recommend products or services to customers.
+8.Observe individuals' activities to gather information or compile evidence.
+9.Coordinate with external parties to exchange information.
+10.Plan environmental research.
+11.Evaluate current or prospective maintenance employees.
+12.Communicate with other workers to coordinate activities.
+13.Record personnel information.
+14.Monitor financial indicators.
+15.Develop emergency procedures.
+16.Resolve operational performance problems.
+17.Monitor business indicators.
+18.Write operational reports.
+19.Advise others regarding green practices or environmental concerns.
+20.Provide technical guidance to other personnel.
+21.Present sustainable products or services information to the public.
+22.Analyze environmental regulations to ensure organizational compliance.
+23.Coordinate operational activities.
+24.Prepare operational reports.
+25.Direct security operations.
+26.Analyze forecasting data to improve business decisions.
+27.Collaborate on research activities with scientists or technical specialists.
+28.Monitor medical facility activities to ensure adherence to standards or regulations.
+29.Negotiate sales or lease agreements for products or services.
+30.Examine records or other types of data to investigate criminal activities.
+31.Calculate data to inform organizational operations.
+32.Organize informational materials.
+33.Gather information in order to provide services to clients.
+34.Apply mathematical models of financial or business conditions.
+35.Plan biological research.
+36.Negotiate purchases or contracts.
+37.Edit documents.
+38.Analyze market conditions or trends.
+39.Monitor financial activities.
+40.Investigate accidents to determine causes.
+41.Verify accuracy of financial information.
+42.Examine financial records to ensure compliance with policies or regulations.
+43.Collaborate with others to determine technical details of productions.
+44.Prepare administrative documents.
+45.Research diseases or parasites.
+46.Study scripts to determine project requirements.
+47.Evaluate personnel practices to ensure adherence to regulations.
+48.Explain use of products or services.
+49.Inform individuals or organizations of status or findings.
+50.Analyze business or financial data.
+51.Review license or permit applications.
+52.Investigate transportation incidents, violations, or complaints.
+53.Coordinate project activities with other personnel or departments.
+54.Maintain records of sales or other business transactions.
+55.Prepare financial documents.
+56.Review production information to determine costume or makeup requirements.
+57.Provide technical support for computer network issues.
+58.Respond to emergencies to provide assistance.
+59.Communicate with the public on environmental issues.
+60.Develop proposals for current or prospective customers.
+61.Recommend improvements to increase safety or reduce risks.
+62.Determine presentation subjects or content.
+63.Conduct amusement or gaming activities.
+64.Prepare contracts, disclosures, or applications.
+65.Prepare operational reports or records.
+66.Disburse funds from clients accounts to creditors.
+67.Authorize financial actions.
+68.Contact current or potential customers to promote products or services.
+69.Research issues related to the environment or sustainable business practices.
+70.Prepare financial documents, reports, or budgets.
+71.Verify employee information.
+72.Examine financial records or processes.
+73.Prepare documentation for contracts, transactions, or regulatory compliance.
+74.Prepare business correspondence.
+75.Analyze financial information.
+76.Report information to managers or other personnel.
+77.Collaborate with others to resolve information technology issues.
+78.Investigate illegal or suspicious activities.
+79.Assess risks to business operations.
+80.Develop promotional materials.
+81.Analyze financial records or reports to determine state of operations.
+82.Provide escort or transportation.
+83.Analyze data to assess operational or project effectiveness.
+84.Manage documentation to ensure organization or accuracy.
+85.Review audio or video recordings.
+86.Use databases to locate investigation details or other information.
+87.Direct environmental development activities.
+88.Conduct anthropological or archaeological research.
+89.Analyze financial records to improve efficiency.
+90.Examine financial records.
+91.Negotiate prices or other sales terms.
+92.Monitor financial information.
+93.Advise others on analytical techniques.
+94.Study details of musical compositions.
+95.Provide customer service to clients or users.
+96.Analyze market or customer related data.
+97.Prepare legal documents.
+98.Communicate with management or other staff to resolve problems.
+99.Assist individuals with paperwork.
+corresponding responsibilities:
+Achieve agreed sales targets and outcomes within schedule.
+Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). 
+Please strictly follow the following format for your answer: 
+1.xxxx. (Task x)
+2.xxxx. (Task x)
+3.xxxx. (Task x)

@@ -1,0 +1,108 @@
+Now given 100 specific task descriptions and 1 specific position, 
+0.Evaluate personnel practices to ensure adherence to regulations.
+1.Recommend improvements to increase safety or reduce risks.
+2.Develop promotional materials.
+3.Evaluate current or prospective maintenance employees.
+4.Prepare informational or reference materials.
+5.Develop proposals for current or prospective customers.
+6.Collaborate with others to resolve information technology issues.
+7.Recommend products or services to customers.
+8.Report information to managers or other personnel.
+9.Coordinate operational activities.
+10.Organize informational materials.
+11.Communicate with the public on environmental issues.
+12.Communicate with management or other staff to resolve problems.
+13.Gather information in order to provide services to clients.
+14.Advise customers on the use of products or services.
+15.Determine presentation subjects or content.
+16.Answer telephones to direct calls or provide information.
+17.Contact current or potential customers to promote products or services.
+18.Monitor patron activities to identify problems or potential problems.
+19.Present work to clients for approval.
+20.Coordinate project activities with other personnel or departments.
+21.Edit documents.
+22.Monitor organizational compliance with regulations.
+23.Confer with managers to make operational decisions.
+24.Provide escort or transportation.
+25.Advise others on analytical techniques.
+26.Analyze environmental regulations to ensure organizational compliance.
+27.Schedule appointments with prospective customers.
+28.Study details of musical compositions.
+29.Conduct anthropological or archaeological research.
+30.Calculate data to inform organizational operations.
+31.Study scripts to determine project requirements.
+32.Assess risks to business operations.
+33.Perform administrative or clerical tasks.
+34.Investigate accidents to determine causes.
+35.Advise others regarding green practices or environmental concerns.
+36.Explain use of products or services.
+37.Direct environmental development activities.
+38.Schedule appointments.
+39.Maintain personnel records.
+40.Analyze financial information.
+41.Discuss goods or services information with customers or patrons.
+42.Observe individuals' activities to gather information or compile evidence.
+43.Coordinate logistics for productions or events.
+44.Prepare financial documents, reports, or budgets.
+45.Approve expenditures.
+46.Verify employee information.
+47.Analyze forecasting data to improve business decisions.
+48.Manage documentation to ensure organization or accuracy.
+49.Inform individuals or organizations of status or findings.
+50.Analyze business or financial data.
+51.Analyze industry trends.
+52.Appraise environmental impact of regulations or policies.
+53.Monitor medical facility activities to ensure adherence to standards or regulations.
+54.Review license or permit applications.
+55.Examine financial records.
+56.Research diseases or parasites.
+57.Plan environmental research.
+58.Advise others about land management or conservation.
+59.Plan natural resources conservation or restoration programs.
+60.Examine financial records to ensure compliance with policies or regulations.
+61.Coordinate operational activities with external stakeholders.
+62.Provide customers with general information or assistance.
+63.Analyze market or customer related data.
+64.Prepare legal documents.
+65.Advise others about environmental management or conservation.
+66.Discuss service options or needs with clients.
+67.Prepare proposal documents.
+68.Monitor external affairs or events affecting business operations.
+69.Market products, services, or events.
+70.Authorize financial actions.
+71.Recommend types of assistive devices.
+72.Direct funeral or mortuary activities.
+73.Examine records or other types of data to investigate criminal activities.
+74.Develop operating strategies, plans, or procedures.
+75.Analyze financial records or reports to determine state of operations.
+76.Supervise scientific or technical personnel.
+77.Coordinate activities of food service staff.
+78.Maintain financial or account records.
+79.Inform others about laws or regulations.
+80.Advise others on the development or use of new technologies.
+81.Analyze information obtained from news sources.
+82.Detain suspects or witnesses.
+83.Collaborate with others to determine technical details of productions.
+84.Coordinate safety or regulatory compliance activities.
+85.Update technical knowledge.
+86.Develop sustainable organizational policies or practices.
+87.Discuss account status or activity with customers or patrons.
+88.Explain regulations, policies, or procedures.
+89.Prepare research or technical reports.
+90.Coordinate with external parties to exchange information.
+91.Respond to emergencies to provide assistance.
+92.Interpret research or operational data.
+93.Conduct amusement or gaming activities.
+94.Investigate crimes committed within organizations.
+95.Collaborate on research activities with scientists or technical specialists.
+96.Monitor financial indicators.
+97.Prepare operational progress or status reports.
+98.Provide attraction or event information to patrons.
+99.Communicate with customers to resolve complaints or ensure satisfaction.
+corresponding responsibilities:
+-Act as the point of contact for Regulatory Affairs towards the process for the creation, approval, and implementation of commercial printed labeling in collaboration with various functions.
+Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). 
+Please strictly follow the following format for your answer: 
+1.xxxx. (Task x)
+2.xxxx. (Task x)
+3.xxxx. (Task x)

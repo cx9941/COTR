@@ -1,7 +1,23 @@
 import numpy as np
 from collections import defaultdict
 
-def aggregate_expert_opinions(expert_lists, weight_scheme='linear',num_categories=10):
+def gen(x, dataset_name='en'):
+    if dataset_name == 'jp':
+        ans = f"100 個の具体的なタスクの説明と 1 つの具体的なポジションが与えられます。\n"
+    else:
+        ans = f"Now given 100 specific task descriptions and 1 specific position, \n"
+    for i in range(100):
+        ans += f"{i}." + x[f"task{i}"] + "\n"
+
+    if dataset_name == 'jp':
+        ans += f"対応する責任:\n{x['job_description']}\n"
+        ans += f"上記の 100 個のタスクの説明から、職務責任に最も適合する 10 個のタスクの説明を選択します (タスクと責任の間の相関関係によって並べられ、相関関係が高いほど上位にランクされます)。\n回答には、次の形式を厳守してください: \n1.xxxx. (タスク x)\n2.xxxx. (タスク x)\n3.xxxx. (タスク x)\n"
+    else:
+        ans += f"corresponding responsibilities:\n{x['job_description']}\n"
+        ans += "Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). \nPlease strictly follow the following format for your answer: \n1.xxxx. (Task x)\n2.xxxx. (Task x)\n3.xxxx. (Task x)\n"
+    return ans
+
+def aggregate_expert_opinions(expert_lists, weight_scheme='linear',num_categories=10, top_num=5):
     """
     Aggregates multiple expert opinions to give the most suitable classification result.
     
@@ -36,8 +52,11 @@ def aggregate_expert_opinions(expert_lists, weight_scheme='linear',num_categorie
     most_suitable_category = max(category_scores, key=category_scores.get)
 
     most_suitable_scores = category_scores[most_suitable_category]
+
+    top5_keys = sorted(category_scores, key=category_scores.get, reverse=True)[:top_num]
+    top5_scores = [category_scores[_] for _ in top5_keys]
     
-    return most_suitable_category, most_suitable_scores
+    return top5_keys, top5_scores
 
 if __name__ == '__main__':
     # Example usage:
@@ -47,5 +66,5 @@ if __name__ == '__main__':
         ['cat_A', 'cat_D', 'cat_B', 'cat_E', 'cat_C', 'cat_F', 'cat_G', 'cat_H', 'cat_I', 'cat_J']
     ]
 
-    result = aggregate_expert_opinions(expert_lists, weight_scheme='linear')
+    result, scores = aggregate_expert_opinions(expert_lists, weight_scheme='linear')
     print("Most suitable category:", result)

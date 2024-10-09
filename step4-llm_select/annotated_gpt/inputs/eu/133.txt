@@ -1,0 +1,108 @@
+Now given 100 specific task descriptions and 1 specific position, 
+0.Perform human resources activities.
+1.Analyze health-related data.
+2.Mediate disputes.
+3.Present business-related information to audiences.
+4.Manage budgets for personal services operations.
+5.Maintain social services program records.
+6.Supervise employees.
+7.Evaluate effectiveness of personnel policies or practices.
+8.Conduct hearings to investigate legal issues.
+9.Discuss business strategies, practices, or policies with managers.
+10.Direct administrative or support services.
+11.Supervise sales or support personnel.
+12.Confer with others about financial matters.
+13.Write material for artistic or entertainment purposes.
+14.Recommend personnel decisions or human resources activities.
+15.Gather medical information from patient histories.
+16.Advise real estate clients.
+17.Record vital statistics or other health information.
+18.Collect medical information from patients, family members, or other medical professionals.
+19.Collaborate with others to develop or implement marketing strategies.
+20.Review laws or regulations to maintain professional knowledge.
+21.Present research results to others.
+22.Supervise production or support personnel.
+23.Direct courtroom activities or procedures.
+24.Interview employees, customers, or others to collect information.
+25.Coordinate musical rehearsals or performances.
+26.Hold patients to ensure proper positioning or safety.
+27.Provide first aid or rescue assistance in emergencies.
+28.Establish standards for medical care.
+29.Identify job or employment opportunities.
+30.Update knowledge about emerging industry or technology trends.
+31.Direct law enforcement activities.
+32.Develop methods of social or economic research.
+33.Meet with individuals involved in legal processes to provide information and clarify issues.
+34.Explain technical medical information to patients.
+35.Conduct scientific research of organizational behavior or processes.
+36.Supervise technical medical personnel.
+37.Diagnose dental conditions.
+38.Represent the organization in external relations.
+39.Prepare official health documents or records.
+40.Write advertising or promotional material.
+41.Schedule patient procedures or appointments.
+42.Recommend investments to clients.
+43.Collect data about customer needs.
+44.Write reports or evaluations.
+45.Manage clerical or administrative activities.
+46.Maintain medical facility records.
+47.Manage financial activities of the organization.
+48.Prepare proposal documents or grant applications.
+49.Prepare written decisions for legal proceedings.
+50.Direct criminal investigations.
+51.Direct activities of subordinates.
+52.Maintain medical records.
+53.Provide technical information or assistance to public.
+54.Establish nursing policies or standards.
+55.Present medical research reports.
+56.Analyze impact of legal or regulatory changes.
+57.Inform viewers, listeners, or audiences.
+58.Answer customer questions about goods or services.
+59.Direct organizational operations, projects, or services.
+60.Develop contingency plans to deal with organizational emergencies.
+61.Conduct surveys in organizations.
+62.Collaborate with others in marketing activities.
+63.Prepare medical reports or documents.
+64.Provide security escorts for officials, jury members, or other individuals.
+65.Develop health assessment methods or programs.
+66.Advise others on financial matters.
+67.Arrange collective bargaining agreements.
+68.Analyze medical data to determine cause of death.
+69.Maintain client records.
+70.Develop organizational goals or objectives.
+71.Manage guest services.
+72.Coordinate artistic activities.
+73.Confer with court staff to clarify information.
+74.Collect information about clients.
+75.Help clients get needed services or resources.
+76.Protect patients or staff members using safety equipment.
+77.Assist clients in handling details of daily life.
+78.Correspond with customers to answer questions or resolve complaints.
+79.Develop financial plans for clients.
+80.Recommend legal actions.
+81.Conduct historical research.
+82.Coordinate legal schedules or activities.
+83.Recommend organizational process or policy changes.
+84.Advise others on health and safety issues.
+85.Interview people to gather information about criminal activities.
+86.Update knowledge of legal or regulatory environments.
+87.Treat dental problems or diseases.
+88.Resolve personnel problems.
+89.Adjust positions of patients on beds or tables.
+90.Evaluate applicable laws and regulations to determine impact on organizational activities.
+91.Count prison inmates or personnel.
+92.Schedule medical facility use.
+93.Negotiate for services.
+94.Conduct market research.
+95.Order medical diagnostic or clinical tests.
+96.Edit written materials.
+97.Coordinate cross-disciplinary research programs.
+98.Follow protocols or regulations for healthcare activities.
+99.Develop organizational policies or programs.
+corresponding responsibilities:
+* Maintain an up to date knowledge of scientific and regulatory developments.
+Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). 
+Please strictly follow the following format for your answer: 
+1.xxxx. (Task x)
+2.xxxx. (Task x)
+3.xxxx. (Task x)

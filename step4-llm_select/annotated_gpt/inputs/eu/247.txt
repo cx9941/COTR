@@ -1,0 +1,108 @@
+Now given 100 specific task descriptions and 1 specific position, 
+0.Monitor performance of organizational members or partners.
+1.Educate clients on financial planning topics.
+2.Administer compensation or benefits programs.
+3.Coordinate personnel recruitment activities.
+4.Position patients for treatment or examination.
+5.Entertain public with comedic or dramatic performances.
+6.Monitor health or behavior of people or animals.
+7.Develop tools to diagnose or assess needs.
+8.Conduct research to increase knowledge about medical issues.
+9.Review professional literature to maintain professional knowledge.
+10.Monitor animal behavior or condition.
+11.Examine animals to detect illness, injury or other problems.
+12.Plan social sciences research.
+13.Treat patients using alternative medical procedures.
+14.Prepare reports summarizing patient diagnostic or care activities.
+15.Collect information from people through observation, interviews, or surveys.
+16.Collaborate with others to prepare or perform artistic productions.
+17.Analyze patient data to determine patient needs or treatment goals.
+18.Administer therapeutic massages.
+19.Fit patients for assistive devices.
+20.Check physical condition of people or animals.
+21.Select staff, team members, or performers.
+22.Assess patient work, living, or social environments.
+23.Evaluate treatment options to guide medical decisions.
+24.Develop promotional strategies for religious organizations.
+25.Feed patients.
+26.Assist healthcare practitioners during examinations or treatments.
+27.Administer medical substances for imaging or other procedures.
+28.Administer standardized physical or psychological tests.
+29.Test patient hearing.
+30.Treat acute illnesses, infections, or injuries.
+31.Provide medical or cosmetic advice for clients.
+32.Conduct diagnostic tests to determine patient health.
+33.Diagnose neural or psychological disorders.
+34.Plan special events.
+35.Assist healthcare practitioners during surgery.
+36.Supervise service workers.
+37.Supervise inmate activities.
+38.Supervise medical support personnel.
+39.Testify at legal or legislative proceedings.
+40.Evaluate characteristics of individuals to determine needs or eligibility.
+41.Monitor nutrition related activities of individuals or groups.
+42.Treat medical emergencies.
+43.Develop professional relationships or networks.
+44.Update professional knowledge.
+45.Treat animal injuries or illnesses.
+46.Test patient heart or lung functioning.
+47.Prepare staff schedules or work assignments.
+48.Assess physical conditions of patients to aid in diagnosis or treatment.
+49.Explain medical procedures or test results to patients or family members.
+50.Collaborate with outside groups to develop programs or projects.
+51.Maintain medical or professional knowledge.
+52.Interpret cultural or religious information for others.
+53.Audition or interview potential performers or staff members.
+54.Interview clients to gather information about their backgrounds, needs, or progress.
+55.Interview patients to gather medical information.
+56.Measure the physical or physiological attributes of patients.
+57.Perform dances.
+58.Conduct research on social issues.
+59.Prepare patients physically for medical procedures.
+60.Evaluate performance of applicants, trainees, or employees.
+61.Collect information about community health needs.
+62.Evaluate employee performance.
+63.Establish operational policies.
+64.Intervene in crisis situations to assist clients.
+65.Perform for recordings.
+66.Accompany patients or clients on outings to provide assistance.
+67.Diagnose medical conditions.
+68.Perform music for the public.
+69.Test patient vision.
+70.Maintain professional social services knowledge.
+71.Develop working relationships with others to facilitate program activities.
+72.Resolve interpersonal conflicts.
+73.Operate on patients to treat conditions.
+74.Advise patients on healthcare system processes.
+75.Evaluate program effectiveness.
+76.Prepare employee work schedules.
+77.Instruct staff in work policies or procedures.
+78.Direct healthcare delivery programs.
+79.Hire personnel.
+80.Establish treatment goals.
+81.Recruit personnel.
+82.Monitor patient conditions during treatments, procedures, or activities.
+83.Evaluate potential problems in home or work environments of clients.
+84.Conduct eligibility or selection interviews.
+85.Examine mouth, teeth, gums, or related facial structures.
+86.Provide care for animals.
+87.Inform medical professionals regarding patient conditions and care.
+88.Advise medical personnel regarding healthcare issues.
+89.Monitor patients to detect health problems.
+90.Monitor clients to evaluate treatment progress.
+91.Interview others for news or entertainment purposes.
+92.Develop medical treatment plans.
+93.Administer personnel recruitment or hiring activities.
+94.Communicate test or assessment results to medical professionals.
+95.Communicate health and wellness information to the public.
+96.Direct medical science or healthcare programs.
+97.Promote products, activities, or organizations.
+98.Audition for roles.
+99.Implement advanced life support techniques.
+corresponding responsibilities:
+Contributes to CRA team knowledge by acting as process Subject Matter Expert (SME), buddy/mentor and sharing best practices as appropriate/required.
+Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). 
+Please strictly follow the following format for your answer: 
+1.xxxx. (Task x)
+2.xxxx. (Task x)
+3.xxxx. (Task x)

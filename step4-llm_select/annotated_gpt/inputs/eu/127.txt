@@ -1,0 +1,108 @@
+Now given 100 specific task descriptions and 1 specific position, 
+0.Perform human resources activities.
+1.Direct administrative or support services.
+2.Analyze health-related data.
+3.Collect medical information from patients, family members, or other medical professionals.
+4.Mediate disputes.
+5.Evaluate effectiveness of personnel policies or practices.
+6.Interview employees, customers, or others to collect information.
+7.Update knowledge about emerging industry or technology trends.
+8.Gather medical information from patient histories.
+9.Maintain social services program records.
+10.Collect data about customer needs.
+11.Supervise employees.
+12.Explain technical medical information to patients.
+13.Write material for artistic or entertainment purposes.
+14.Meet with individuals involved in legal processes to provide information and clarify issues.
+15.Schedule patient procedures or appointments.
+16.Hold patients to ensure proper positioning or safety.
+17.Discuss business strategies, practices, or policies with managers.
+18.Conduct hearings to investigate legal issues.
+19.Coordinate musical rehearsals or performances.
+20.Supervise sales or support personnel.
+21.Present business-related information to audiences.
+22.Advise real estate clients.
+23.Manage budgets for personal services operations.
+24.Diagnose dental conditions.
+25.Direct activities of subordinates.
+26.Present medical research reports.
+27.Conduct surveys in organizations.
+28.Supervise technical medical personnel.
+29.Supervise production or support personnel.
+30.Provide first aid or rescue assistance in emergencies.
+31.Confer with others about financial matters.
+32.Record vital statistics or other health information.
+33.Recommend investments to clients.
+34.Recommend personnel decisions or human resources activities.
+35.Review laws or regulations to maintain professional knowledge.
+36.Direct courtroom activities or procedures.
+37.Prepare proposal documents or grant applications.
+38.Establish standards for medical care.
+39.Develop health assessment methods or programs.
+40.Advise others on financial matters.
+41.Collaborate with others to develop or implement marketing strategies.
+42.Present research results to others.
+43.Develop methods of social or economic research.
+44.Analyze medical data to determine cause of death.
+45.Identify job or employment opportunities.
+46.Direct law enforcement activities.
+47.Assist clients in handling details of daily life.
+48.Help clients get needed services or resources.
+49.Confer with court staff to clarify information.
+50.Coordinate artistic activities.
+51.Advise others on health and safety issues.
+52.Conduct scientific research of organizational behavior or processes.
+53.Interview people to gather information about criminal activities.
+54.Treat dental problems or diseases.
+55.Maintain medical facility records.
+56.Recommend legal actions.
+57.Represent the organization in external relations.
+58.Write advertising or promotional material.
+59.Prepare official health documents or records.
+60.Direct criminal investigations.
+61.Maintain medical records.
+62.Write reports or evaluations.
+63.Manage clerical or administrative activities.
+64.Manage financial activities of the organization.
+65.Prepare written decisions for legal proceedings.
+66.Establish nursing policies or standards.
+67.Schedule medical facility use.
+68.Provide technical information or assistance to public.
+69.Analyze impact of legal or regulatory changes.
+70.Answer customer questions about goods or services.
+71.Order medical diagnostic or clinical tests.
+72.Count prison inmates or personnel.
+73.Inform viewers, listeners, or audiences.
+74.Edit written materials.
+75.Provide security escorts for officials, jury members, or other individuals.
+76.Prepare medical reports or documents.
+77.Develop contingency plans to deal with organizational emergencies.
+78.Direct organizational operations, projects, or services.
+79.Collaborate with others in marketing activities.
+80.Coordinate cross-disciplinary research programs.
+81.Accompany individuals or groups to activities.
+82.Arrange collective bargaining agreements.
+83.Maintain client records.
+84.Develop organizational goals or objectives.
+85.Advise others on legal or regulatory compliance matters.
+86.Protect patients or staff members using safety equipment.
+87.Communicate detailed medical information to patients or family members.
+88.Care for animals.
+89.Record patient medical histories.
+90.Manage guest services.
+91.Collect information about clients.
+92.Evaluate civic projects or public policies.
+93.Provide information to the general public.
+94.Develop financial plans for clients.
+95.Correspond with customers to answer questions or resolve complaints.
+96.Coordinate legal schedules or activities.
+97.Perform clerical work in medical settings.
+98.Report news to the public.
+99.Adjust positions of patients on beds or tables.
+corresponding responsibilities:
+* Develop, review and coordinate the safety review procedures, policies and activities within Experimental Medicine Neuroscience
+Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). 
+Please strictly follow the following format for your answer: 
+1.xxxx. (Task x)
+2.xxxx. (Task x)
+3.xxxx. (Task x)

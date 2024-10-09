@@ -1,0 +1,108 @@
+Now given 100 specific task descriptions and 1 specific position, 
+0.Manage guest services.
+1.Provide technical information or assistance to public.
+2.Direct organizational operations, projects, or services.
+3.Develop organizational goals or objectives.
+4.Develop financial plans for clients.
+5.Correspond with customers to answer questions or resolve complaints.
+6.Collaborate with others in marketing activities.
+7.Answer customer questions about goods or services.
+8.Negotiate for services.
+9.Manage clerical or administrative activities.
+10.Collect information about clients.
+11.Recommend organizational process or policy changes.
+12.Resolve personnel problems.
+13.Coordinate legal schedules or activities.
+14.Update knowledge of legal or regulatory environments.
+15.Write informational material.
+16.Manage financial activities of the organization.
+17.Conduct market research.
+18.Write reports or evaluations.
+19.Evaluate applicable laws and regulations to determine impact on organizational activities.
+20.Conduct historical research.
+21.Develop contingency plans to deal with organizational emergencies.
+22.Direct financial operations.
+23.Represent the organization in external relations.
+24.Write advertising or promotional material.
+25.Protect patients or staff members using safety equipment.
+26.Supervise information technology personnel.
+27.Conduct scientific research of organizational behavior or processes.
+28.Develop promotional strategies or plans.
+29.Inform viewers, listeners, or audiences.
+30.Maintain client records.
+31.Follow protocols or regulations for healthcare activities.
+32.Develop organizational policies or programs.
+33.Establish nursing policies or standards.
+34.Coordinate sales campaigns.
+35.Prepare written decisions for legal proceedings.
+36.Manage human resources activities.
+37.Advise others on business or operational matters.
+38.Confer with personnel to coordinate business operations.
+39.Discuss production content and progress with others.
+40.Manage operations of artistic or entertainment departments or organizations.
+41.Provide security escorts for officials, jury members, or other individuals.
+42.Prepare medical reports or documents.
+43.Arrange collective bargaining agreements.
+44.Collaborate with others to develop or implement marketing strategies.
+45.Analyze impact of legal or regulatory changes.
+46.Develop program goals or plans.
+47.Prepare official health documents or records.
+48.Negotiate agreements to resolve disputes.
+49.Identify job or employment opportunities.
+50.Prepare information or documentation related to legal or regulatory matters.
+51.Maintain medical records.
+52.Prepare research reports.
+53.Confer with others about financial matters.
+54.Study product information to acquire professional knowledge.
+55.Adjust positions of patients on beds or tables.
+56.Coordinate reporting or editing activities.
+57.Identify implications for cases from legal precedents or other legal information.
+58.Maintain medical facility records.
+59.Manage budgets for appropriate resource allocation.
+60.Direct criminal investigations.
+61.Recommend personnel decisions or human resources activities.
+62.Rule on admissibility of legal proceedings.
+63.Develop healthcare quality and safety procedures.
+64.Establish standards for medical care.
+65.Help patrons use library or archival resources.
+66.Present research results to others.
+67.Present business-related information to audiences.
+68.Obtain personal or financial information about customers or applicants.
+69.Manage organizational or project budgets.
+70.Gather customer or product information to determine customer needs.
+71.Negotiate labor disputes.
+72.Direct operations of correctional facilities.
+73.Manage budgets for personal services operations.
+74.Direct law enforcement activities.
+75.Inform the public about policies, services or procedures.
+76.Negotiate contracts with clients or service providers.
+77.Resolve customer complaints or problems.
+78.Record vital statistics or other health information.
+79.Verify accuracy of patient information.
+80.Advise others on logistics topics.
+81.Respond to customer problems or complaints.
+82.Prepare documentation of legal proceedings.
+83.Perform animal breeding procedures.
+84.Calculate numerical data for medical activities.
+85.Develop methods of social or economic research.
+86.Respond to customer inquiries.
+87.Direct courtroom activities or procedures.
+88.Develop marketing plans or strategies.
+89.Process healthcare paperwork.
+90.Review laws or regulations to maintain professional knowledge.
+91.Complete documentation required by programs or regulations.
+92.Supervise sales or support personnel.
+93.Refer customers to appropriate personnel.
+94.Interpret financial information for others.
+95.Make decisions in legal cases.
+96.Document information related to legal proceedings.
+97.Research relevant legal materials to aid decision making.
+98.Deliver promotional presentations to current or prospective customers.
+99.Direct sales, marketing, or customer service activities.
+corresponding responsibilities:
+Advise Directors & Senior Managers of risk, issues & opportunities around achieving the production plan
+Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). 
+Please strictly follow the following format for your answer: 
+1.xxxx. (Task x)
+2.xxxx. (Task x)
+3.xxxx. (Task x)

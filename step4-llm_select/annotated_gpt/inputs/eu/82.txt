@@ -1,0 +1,108 @@
+Now given 100 specific task descriptions and 1 specific position, 
+0.Present work to clients for approval.
+1.Answer telephones to direct calls or provide information.
+2.Advise customers on the use of products or services.
+3.Discuss service options or needs with clients.
+4.Evaluate personnel practices to ensure adherence to regulations.
+5.Communicate with management or other staff to resolve problems.
+6.Monitor organizational compliance with regulations.
+7.Analyze information obtained from news sources.
+8.Analyze industry trends.
+9.Collaborate with others to resolve information technology issues.
+10.Schedule appointments.
+11.Coordinate logistics for productions or events.
+12.Report information to managers or other personnel.
+13.Provide customers with general information or assistance.
+14.Develop promotional materials.
+15.Develop proposals for current or prospective customers.
+16.Communicate with customers to resolve complaints or ensure satisfaction.
+17.Update technical knowledge.
+18.Inform others about laws or regulations.
+19.Develop sustainable organizational policies or practices.
+20.Coordinate operational activities with external stakeholders.
+21.Advise others on the development or use of new technologies.
+22.Approve expenditures.
+23.Study details of musical compositions.
+24.Recommend improvements to increase safety or reduce risks.
+25.Advise others on analytical techniques.
+26.Supervise scientific or technical personnel.
+27.Discuss goods or services information with customers or patrons.
+28.Advise others about land management or conservation.
+29.Advise others about environmental management or conservation.
+30.Recommend changes or corrective procedures.
+31.Explain regulations, policies, or procedures.
+32.Maintain personnel records.
+33.Prepare proposal documents.
+34.Prepare research or technical reports.
+35.Investigate crimes committed within organizations.
+36.Share sales-related or market information with colleagues.
+37.Appraise environmental impact of regulations or policies.
+38.Maintain financial or account records.
+39.Coordinate activities of food service staff.
+40.Monitor external affairs or events affecting business operations.
+41.Coordinate safety or regulatory compliance activities.
+42.Recommend types of assistive devices.
+43.Prepare operational progress or status reports.
+44.Coordinate enforcement of laws or regulations.
+45.Monitor patron activities to identify problems or potential problems.
+46.Develop procedures to evaluate organizational activities.
+47.Assess risks to business operations.
+48.Plan natural resources conservation or restoration programs.
+49.Maintain knowledge of business operations.
+50.Detain suspects or witnesses.
+51.Manage documentation to ensure organization or accuracy.
+52.Coordinate project activities with other personnel or departments.
+53.Communicate with the public on environmental issues.
+54.Conduct anthropological or archaeological research.
+55.Direct environmental development activities.
+56.Collect evidence for legal proceedings.
+57.Record information about suspects or criminals.
+58.Analyze financial information.
+59.Direct funeral or mortuary activities.
+60.Contact current or potential customers to promote products or services.
+61.Communicate results of environmental research.
+62.Examine financial records.
+63.Provide escort or transportation.
+64.Analyze consumer trends.
+65.Communicate organizational policies and procedures.
+66.Direct natural resources management or conservation programs.
+67.Study scripts to determine project requirements.
+68.Determine presentation subjects or content.
+69.Organize informational materials.
+70.Prepare financial documents, reports, or budgets.
+71.Coordinate operational activities.
+72.Analyze market or customer related data.
+73.Prepare project budgets.
+74.Verify employee information.
+75.Gather information in order to provide services to clients.
+76.Prepare legal documents.
+77.Evaluate current or prospective maintenance employees.
+78.Prepare informational or reference materials.
+79.Edit documents.
+80.Communicate organizational information to customers or other stakeholders.
+81.Greet customers, patrons, or visitors.
+82.Develop emergency response plans or procedures.
+83.Develop content for sales presentations or other materials.
+84.Analyze budgetary or accounting data.
+85.Recommend products or services to customers.
+86.Develop marketing plans or strategies for environmental initiatives.
+87.Collaborate with others to determine production details.
+88.Calculate data to inform organizational operations.
+89.Oversee business processes.
+90.Advise customers on technical or procedural issues.
+91.Review customer insurance information.
+92.Prepare operational budgets.
+93.Analyze market research data.
+94.Conduct financial or regulatory audits.
+95.Discuss account status or activity with customers or patrons.
+96.Analyze environmental regulations to ensure organizational compliance.
+97.Analyze business or financial data.
+98.Gather information for news stories.
+99.Provide basic information to guests, visitors, or clients.
+corresponding responsibilities:
+Territory Sales Manager working with a specialist product portfolio on behalf of a fast growing division within a global healthcare organisation
+Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). 
+Please strictly follow the following format for your answer: 
+1.xxxx. (Task x)
+2.xxxx. (Task x)
+3.xxxx. (Task x)

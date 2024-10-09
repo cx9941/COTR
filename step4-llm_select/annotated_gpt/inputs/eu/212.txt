@@ -1,0 +1,108 @@
+Now given 100 specific task descriptions and 1 specific position, 
+0.Customize financial products or services to meet customer needs.
+1.Provide technical support for software maintenance or use.
+2.Provide recommendations to others about computer hardware.
+3.Examine marketing materials to ensure compliance with policies or regulations.
+4.Provide information about landscaping services or costs.
+5.Confer with others to conduct or arrange operational activities.
+6.Collaborate with technical specialists to resolve design or development problems.
+7.Research human performance or health factors related to engineering or design activities.
+8.Develop safety standards, policies, or procedures.
+9.Confer with clients to determine needs.
+10.Estimate costs or terms of sales.
+11.Determine resource needs.
+12.Research genetic characteristics or expression.
+13.Evaluate data quality.
+14.Monitor external factors impacting operations.
+15.Monitor organizational processes.
+16.Review plans or proposals for environmental conservation.
+17.Identify opportunities to improve operational efficiency.
+18.Maintain current knowledge related to work activities.
+19.Analyze data to identify or resolve operational problems.
+20.Issue documentation or identification to customers or employees.
+21.Evaluate environmental impact of operational or development activities.
+22.Direct scientific activities.
+23.Analyze risks related to investments in green technology.
+24.Identify environmental concerns.
+25.Maintain client information or service records.
+26.Research environmental impact of industrial or development activities.
+27.Proofread documents, records, or other files to ensure accuracy.
+28.Process medical billing information.
+29.Implement advertising or marketing initiatives.
+30.Direct fire fighting or prevention activities.
+31.Review documents or materials for compliance with policies or regulations.
+32.Resolve issues affecting transportation operations.
+33.Supervise engineering or other technical personnel.
+34.Recommend changes to improve computer or information systems.
+35.Advise others on management of emergencies or hazardous situations or materials.
+36.Monitor activities of individuals to ensure safety or compliance with rules.
+37.Analyze geological or geographical data.
+38.Appraise property values.
+39.Maintain contingency plans for disaster recovery.
+40.Analyze environmental data.
+41.Obtain documentation to authorize activities.
+42.Reconcile records of sales or other financial transactions.
+43.Examine personal documentation to ensure that it is valid.
+44.Create marketing materials.
+45.Assign resources or facilities to patrons or employees.
+46.Identify opportunities for green initiatives.
+47.Develop environmental research methods.
+48.Analyze traffic data.
+49.Calculate financial data.
+50.Prepare documentation for permits or licenses.
+51.Communicate project information to others.
+52.Calculate tax information.
+53.Contract real estate to clients.
+54.Maintain records of customer accounts.
+55.Develop financial analysis methods.
+56.Analyze website or related online data to track trends or usage.
+57.Pay charges, fees, or taxes.
+58.Issue permits or other legal documents.
+59.Monitor organizational procedures to ensure proper functioning.
+60.Establish business management methods.
+61.Monitor current trends.
+62.Implement financial decisions.
+63.Analyze physical, survey, or geographic data.
+64.Compute gaming wins and losses.
+65.Verify accuracy of records.
+66.Collect archival data.
+67.Search files, databases or reference materials to obtain needed information.
+68.Direct activities of agricultural, forestry, or fishery employees.
+69.Discuss designs or plans with clients.
+70.Prepare accident or incident reports.
+71.Translate information for others.
+72.Document organizational or operational procedures.
+73.Make travel, accommodations, or entertainment arrangements for others.
+74.Distribute resources to patrons or employees.
+75.Maintain public order or security.
+76.Rescue people from hazardous situations.
+77.Create musical compositions, arrangements or scores.
+78.Prepare technical or operational reports.
+79.Develop environmental sustainability plans or projects.
+80.Monitor flow of cash or other resources.
+81.Provide notifications to customers or patrons.
+82.Submit financial applications.
+83.Identify sustainable business practices.
+84.Determine pricing or monetary policies.
+85.Verify accuracy of data.
+86.Apply mathematical principles or statistical approaches to solve problems in scientific or applied fields.
+87.Relay information between personnel.
+88.Arrange services or reservations for patrons.
+89.Prepare technical reports for internal use.
+90.Conduct climatological research.
+91.Develop fire safety or prevention programs or plans.
+92.Move patients to or from treatment areas.
+93.Review customer information.
+94.Advise others on green energy or related technologies.
+95.Develop policies or procedures for archives, museums or libraries.
+96.Issue warnings or citations.
+97.Prepare forms or applications.
+98.Design healthcare-related software applications.
+99.Develop biological research methods.
+corresponding responsibilities:
+- To manage and develop existing accounts by maintaining customer relationships via
+Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). 
+Please strictly follow the following format for your answer: 
+1.xxxx. (Task x)
+2.xxxx. (Task x)
+3.xxxx. (Task x)

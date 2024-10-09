@@ -1,0 +1,108 @@
+Now given 100 specific task descriptions and 1 specific position, 
+0.Recommend changes to improve computer or information systems.
+1.Establish business management methods.
+2.Implement advertising or marketing initiatives.
+3.Monitor organizational procedures to ensure proper functioning.
+4.Discuss designs or plans with clients.
+5.Prepare technical reports for internal use.
+6.Prepare technical or operational reports.
+7.Implement organizational process or policy changes.
+8.Identify opportunities to improve operational efficiency.
+9.Develop environmental sustainability plans or projects.
+10.Develop policies or procedures for archives, museums or libraries.
+11.Review customer information.
+12.Document organizational or operational procedures.
+13.Issue warnings or citations.
+14.Develop sustainable business strategies or practices.
+15.Implement financial decisions.
+16.Translate information for others.
+17.Develop fire safety or prevention programs or plans.
+18.Identify opportunities for green initiatives.
+19.Review documents or materials for compliance with policies or regulations.
+20.Develop environmental remediation or protection plans.
+21.Design healthcare-related software applications.
+22.Pay charges, fees, or taxes.
+23.Monitor organizational processes.
+24.Design research studies to obtain scientific information.
+25.Determine pricing or monetary policies.
+26.Maintain public order or security.
+27.Discuss design or technical features of products or services with technical personnel.
+28.Monitor market conditions or trends.
+29.Monitor current trends.
+30.Communicate with clients about products, procedures, and policies.
+31.Resolve issues affecting transportation operations.
+32.Collect archival data.
+33.Distribute resources to patrons or employees.
+34.Evaluate data quality.
+35.Maintain the order of legal documents.
+36.Advise others on management of emergencies or hazardous situations or materials.
+37.Analyze data to inform operational decisions or activities.
+38.Conduct climatological research.
+39.Negotiate contracts for transportation, distribution, or logistics services.
+40.Manage operations, research, or logistics projects.
+41.Maintain records of customer accounts.
+42.Direct emergency management activities.
+43.Enforce rules or regulations.
+44.Direct activities of agricultural, forestry, or fishery employees.
+45.Arrange facility schedules.
+46.Develop safety standards, policies, or procedures.
+47.Verify accuracy of records.
+48.Submit financial applications.
+49.Monitor sales activities.
+50.Create marketing materials.
+51.Explain technical product or service information to customers.
+52.Apprehend criminal suspects.
+53.Prepare accident or incident reports.
+54.Prepare forms or applications.
+55.Provide notifications to customers or patrons.
+56.Analyze risks related to investments in green technology.
+57.Analyze physical, survey, or geographic data.
+58.Verify that medical activities or operations meet standards.
+59.Record sales or transactions data.
+60.Identify potential customers.
+61.Direct scientific activities.
+62.Review audio or video recordings.
+63.Assist others during emergencies.
+64.Coordinate logistics or other business operations.
+65.Appraise property values.
+66.Confer with clients to determine needs.
+67.Verify application data to determine program eligibility.
+68.Analyze data to identify trends or relationships among variables.
+69.Direct fire fighting or prevention activities.
+70.Analyze operational or research data.
+71.Review plans or proposals for environmental conservation.
+72.Prepare sales or other contracts.
+73.Review accuracy of sales or other transactions.
+74.Prepare business correspondence.
+75.Verify customer credit information.
+76.Provide technical support for computer network issues.
+77.Provide information about landscaping services or costs.
+78.Analyze website or related online data to track trends or usage.
+79.Process medical billing information.
+80.Contract real estate to clients.
+81.Gather financial records.
+82.Collaborate with others to develop or refine designs.
+83.Customize financial products or services to meet customer needs.
+84.Negotiate prices or other sales terms.
+85.Collaborate with others to determine design specifications or details.
+86.Collaborate with technical specialists to resolve design or development problems.
+87.Compute debt repayment schedules.
+88.Prepare contracts or other transaction documents.
+89.Issue documentation or identification to customers or employees.
+90.Confer with others to conduct or arrange operational activities.
+91.Evaluate environmental impact of operational or development activities.
+92.Supervise engineering or other technical personnel.
+93.Arrange services or reservations for patrons.
+94.Estimate costs or terms of sales.
+95.Monitor financial information.
+96.Rescue people from hazardous situations.
+97.Provide technical guidance to other personnel.
+98.Proofread documents, records, or other files to ensure accuracy.
+99.Research issues related to the environment or sustainable business practices.
+corresponding responsibilities:
+- Ensure all work generated by the team complies with regulatory requirements, high quality data is generated and results are issued in a timely manner.
+Please select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). 
+Please strictly follow the following format for your answer: 
+1.xxxx. (Task x)
+2.xxxx. (Task x)
+3.xxxx. (Task x)
