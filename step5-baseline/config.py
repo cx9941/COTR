@@ -10,10 +10,10 @@ args = parser.parse_args()
 
 args.input_dir_name = f"seed{args.seed}"
 
-args.output_dir = f"outputs/{args.dataset_name}/{args.input_dir_name}/input{args.turn}"
-args.result_dir = f"results/{args.dataset_name}/{args.input_dir_name}"
-args.next_input_path = f"data/{args.dataset_name}/{args.input_dir_name}/input{args.turn + 1}.csv"
-args.input_path = f"data/{args.dataset_name}/{args.input_dir_name}/input{args.turn}.csv"
+args.output_dir = f"outputs/{args.dataset_name}/{args.llm_type}/{args.input_dir_name}/input{args.turn}"
+args.result_dir = f"results/{args.dataset_name}/{args.llm_type}/{args.input_dir_name}"
+args.next_input_path = f"data/{args.dataset_name}/{args.llm_type}/{args.input_dir_name}/input{args.turn + 1}.csv"
+args.input_path = f"data/{args.dataset_name}/{args.llm_type}/{args.input_dir_name}/input{args.turn}.csv"
 
 if not os.path.exists(args.output_dir):
     os.makedirs(args.output_dir)
