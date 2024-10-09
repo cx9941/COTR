@@ -3,6 +3,7 @@
 
 import requests 
 import json 
+import time
 
 def get_gpt_response(text):
     url = "https://gpt-api.hkust-gz.edu.cn/v1/chat/completions" 
@@ -15,9 +16,15 @@ def get_gpt_response(text):
     "messages": [{"role": "user", "content": text}], 
     "temperature": 0.7 
     } 
-    response = requests.post(url, headers=headers, data=json.dumps(data)) 
-    ans = response.json()
-    return ans['choices'][0]['message']['content']
+    try:
+        response = requests.post(url, headers=headers, data=json.dumps(data)) 
+        ans = response.json()
+        ans = ans['choices'][0]['message']['content']
+    except Exception as e:
+        print(e)
+        time.sleep(60)
+        ans = get_gpt_response(text)
+    return ans
 
 # 调用 EB4.0 
 def get_eb_response(prompt):
