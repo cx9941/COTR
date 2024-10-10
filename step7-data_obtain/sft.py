@@ -31,12 +31,12 @@ from sklearn.metrics import roc_auc_score
 
 def set_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model_dir',default="/home/data/qinchuan/TMIS/paper_code/llm_models/baichuan-inc/Baichuan2-7B-Base",type=str,help='')
+    parser.add_argument('--model_dir',default="../llms/Baichuan2-7B-Base",type=str,help='')
     # parser.add_argument('--model_dir',default="public/baichuan-inc/Baichuan-13B-Base",type=str,help=')
-    parser.add_argument('--output_dir',default='/home/data/qinchuan/TMIS/paper_code/output/data_obtain/baichuan',type=str,help='')
-    parser.add_argument('--data_path', default='/home/data/qinchuan/TMIS/paper_code/task_data/eu/eu-gpt.csv', type=str,
+    parser.add_argument('--output_dir',default='temp_outputs',type=str,help='')
+    parser.add_argument('--data_path', default='data/eu/eu-gpt.csv', type=str,
                         help='')
-    parser.add_argument('--rank_path', default='/home/data/qinchuan/TMIS/paper_code/task_data/eu/rank_bert.json',
+    parser.add_argument('--rank_path', default='data/eu/rank_bert.json',
                         type=str,
                         help='')
     parser.add_argument('--num_train_epochs',default=5,type=int,help='')
@@ -45,7 +45,7 @@ def set_args():
     parser.add_argument('--gradient_accumulation_steps',default=4,type=int,help='')
     parser.add_argument('--local_rank',type=int,default=0,help='')
     # parser.add_argument('-lora_r',type=int,default=8,help='')
-    parser.add_argument("--deepspeed",type=str,default='/home/data/qinchuan/TMIS/paper_code/data_obtain/ds_zero2.json',help="path to deepspeed")
+    parser.add_argument("--deepspeed",type=str,default='ds_zero2.json',help="path to deepspeed")
     return parser.parse_args()
 
 
