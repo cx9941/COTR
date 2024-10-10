@@ -24,6 +24,7 @@ def get_gpt_response(text):
         print(e)
         time.sleep(60)
         ans = get_gpt_response(text)
+    time.sleep(30)
     return ans
 
 # 调用 EB4.0 
@@ -51,22 +52,26 @@ def get_eb_response(prompt):
 
 
 import os
+import qianfan
+os.environ["QIANFAN_ACCESS_KEY"] = "ALTAKAPLmViDOdQsF3NMPPQtx6"
+os.environ["QIANFAN_SECRET_KEY"] = "61a662aab7314cecb20a122a77109fcd"
 
 def get_ebot_results(prompt):
-    import qianfan
-    # 通过环境变量初始化认证信息
-    # 方式一：【推荐】使用安全认证AK/SK鉴权
-    # 替换下列示例中参数，安全认证Access Key替换your_iam_ak，Secret Key替换your_iam_sk，如何获取请查看https://cloud.baidu.com/doc/Reference/s/9jwvz2egb
-    os.environ["QIANFAN_ACCESS_KEY"] = "your_iam_ak"
-    os.environ["QIANFAN_SECRET_KEY"] = "your_iam_sk"
-    chat_comp = qianfan.ChatCompletion()
-    # 指定特定模型
-    resp = chat_comp.do(model="ERNIE-Speed-8K", messages=[{
-        "role": "user",
-        "content": "你好"
-    }])
-    return resp["body"] 
+    try:
+        chat_comp = qianfan.ChatCompletion()
+
+        resp = chat_comp.do(model="ERNIE-Speed-128K", messages=[{
+            "role": "user",
+            "content": prompt
+        }])
+        ans = resp["body"]['result']
+    except Exception as e:
+        print(e)
+        ans = get_ebot_results(prompt)
+        time.sleep(60)
+    time.sleep(10)
+    return ans
 
 if __name__ == '__main__':
-    ans = get_gpt_response('你好')
+    ans = get_ebot_results('你好')
     print(ans)

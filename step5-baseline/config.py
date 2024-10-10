@@ -2,7 +2,7 @@ import argparse
 import os
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset_name', default='en', type=str)
+parser.add_argument('--dataset_name', default='jp', type=str)
 parser.add_argument('--llm_type', default='gpt', type=str)
 parser.add_argument('--seed', default=0, type=int)
 parser.add_argument('--turn', default=0, type=int)

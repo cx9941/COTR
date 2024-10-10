@@ -1,7 +1,6 @@
-set -o errexit
 for seed in 0 1
 do
-for turn in 0 1 2 3 4
+for turn in 0 1 2 3 4 5 6 7
 do
 for dataset_name in 'en' 'eu' 'jp'
 do

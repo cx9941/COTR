@@ -1,6 +1,6 @@
 import pandas as pd
 from utils import gen
-from llm_func import get_gpt_response
+from llm_func import get_gpt_response, get_ebot_results
 from tqdm import tqdm
 from config import args
 import os
@@ -17,7 +17,9 @@ if len(final_ans) > 0:
     for idx in tqdm(range(len(final_ans))):
         if os.path.exists(f'{args.output_dir}/{idx}.txt'):
             continue
-        results = get_gpt_response(final_ans['prompt'][idx])
+        if args.llm_type == 'ebot':
+            results = get_ebot_results(final_ans['prompt'][idx])
+        else:
+            results = get_gpt_response(final_ans['prompt'][idx])
         with open(f'{args.output_dir}/{idx}.txt', 'w') as w:
             w.write(results)
-        time.sleep(60)
