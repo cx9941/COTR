@@ -1,0 +1,33 @@
+# %%
+import pandas as pd
+import os
+from config import args
+import re
+from tqdm import tqdm
+all_data_task_topk = pd.read_csv(args.input_path, sep='\t').reset_index()
+# 读取输出文件
+final_ans = {'index':[], 'task': []}
+for i in tqdm(os.listdir(args.output_dir)):
+    idx = int(re.findall(r'\d+', i)[0])
+    text = open(f"{args.output_dir}/{idx}.txt", 'r').read()
+    content = text[text.find('<|start_header_id|>assistant<|end_header_id|>'):]
+    ans = re.findall(r'\d\.+(.*?)\n', content)
+    candidates = [all_data_task_topk[f'task{_}'][idx].strip(' ') for _ in range(100)]
+    results = []
+    # rgex = '|'.join([_ for _ in  candidates])
+    # results = re.findall(rf"{rgex}", content)
+    for line in content.split('\n'):
+        for can in candidates:
+            if can in line:
+                results.append(can)
+                break
+    if len(results) != 10:
+        continue
+    final_ans['task'].append(results)
+    final_ans['index'].append(idx)
+final_ans = pd.DataFrame(final_ans)
+
+# 处理输出文件
+final_ans = pd.merge(all_data_task_topk[['index', 'job_title', 'job_description']], final_ans, on=['index']).drop('index', axis=1)
+# final_ans.to_parquet(f'{args.result_dir}/result{args.turn}.parquet')
+final_ans.to_excel(f'{args.result_dir}/result{args.turn}.xlsx', index=None)

@@ -2,6 +2,7 @@ import os
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_name', type=str, default='eu')
+parser.add_argument('--backbone', type=str, default='Meta-Llama-3.1-8B-Instruct')
 parser.add_argument('--seed', type=int, default=0)
 parser.add_argument('--turn', type=int, default=0)
 args = parser.parse_args()
