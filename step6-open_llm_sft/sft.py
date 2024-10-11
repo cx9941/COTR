@@ -26,13 +26,10 @@ from sklearn.metrics import ndcg_score
 import torch.nn.functional as F
 from sklearn.metrics import roc_auc_score
 
-# device = torch.device("cuda:1" if torch.cuda.is_available() else"cpu")
-# os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2,3"
-
 def set_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model_dir',default="../llms/Baichuan2-7B-Base",type=str,help='')
-    # parser.add_argument('--model_dir',default="public/baichuan-inc/Baichuan-13B-Base",type=str,help=')
+    parser.add_argument('--model_name',default="baichuan",type=str,help='')
+    parser.add_argument('--task_name',default="en",type=str,help='')
     parser.add_argument('--output_dir',default='temp_outputs',type=str,help='')
     parser.add_argument('--data_path', default='data/eu/eu-gpt.csv', type=str,
                         help='')
@@ -51,16 +48,28 @@ def set_args():
 
 def main():
     args = set_args()
-    model = AutoModelForCausalLM.from_pretrained(args.model_dir,trust_remote_code=True)
-    tokenizer = AutoTokenizer.from_pretrained(args.model_dir,trust_remote_code=True)
+    if os.path.exists(args.output_dir):
+        return 0
+    map_dir = {
+        'llama': "../llms/Meta-Llama-3.1-8B",
+        'baichuan': "../llms/Baichuan2-7B-Chat",
+        'nanbeige': "../llms/Nanbeige2-8B-Chat",
+    }
+    args.model_dir = map_dir[args.model_name]
+    model = AutoModelForCausalLM.from_pretrained(args.model_dir, trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_dir, trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token
+    if 'Baichuan2' in args.model_dir:
+        target_modules = ["W_pack"]
+    else:
+        target_modules = ["q_proj", "v_proj"]
+
 
     peft_config = LoraConfig(
         r=16,
         lora_alpha=32,
         lora_dropout=0.05,
-        # target_modules=["q_proj", "v_proj"],
-        target_modules=["W_pack"],
+        target_modules=target_modules,
         bias="none",
         task_type="CAUSAL_LM",
     )
@@ -99,9 +108,11 @@ def main():
     for index in range(len(data)):
         text = data[index]['text']
         name = "".join([f"class{j}." + data[index][f"top{j}"] for j in range(1, 31)])
-        q = f'### Query: Now given 100 specific task descriptions and 1 specific position, \nSpecific tasks: {name}\n corresponding responsibilities: {text}\nPlease select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). \n Please strictly follow the following format for your answer: \n1.xxxx.\n2.xxxx.\n3.xxxx.\n ### Answer:'
-        # q = f'Now gives 77 descriptions of specific intents and 1 specific text,specific text:{text}\n Please strictly follow the format of the answer given:\n1.xxxx\n2.xxxx\n3.xxxx\n.'
-        # query_list.append(q)
+
+        if args.task_name == 'jp':
+            q = f"### クエリ: 100 個の特定のタスクの説明と 1 つの特定のポジションが与えられます。\n具体的なタスク: {name}\n 対応する責任: {text}\n上記の 100 個のタスク記述から、そのポジションの対応する責任に最も一致する 10 個のタスク記述を選択してください (適合度の高い順に並べ替えられています)。\n回答では、次の形式に厳密に従ってください: \n1.xxxx.\n2.xxxx.\n3.xxxx.\n ### 回答:"
+        else:
+            q = f'### Query: Now given 100 specific task descriptions and 1 specific position, \nSpecific tasks: {name}\n corresponding responsibilities: {text}\nPlease select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). \n Please strictly follow the following format for your answer: \n1.xxxx.\n2.xxxx.\n3.xxxx.\n ### Answer:'
 
         # if result['category'][index] in candidate and tmpnum[result['category'][index]] < 40:
         query_list.append(q)

@@ -31,16 +31,16 @@ os.environ['CUDA_LAUNCH_BL0CKING']='2'
 
 def set_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_path', default='/home/data/qinchuan/TMIS/paper_code/task_data/en/en-gpt.csv', type=str,
+    parser.add_argument('--data_path', default='../step3-bert_recall/data/en/en-gpt.csv', type=str,
                         help='')
-    parser.add_argument('--rank_path', default='/home/data/qinchuan/TMIS/paper_code/task_data/en/rank_bert.json',
+    parser.add_argument('--rank_path', default='../step3-bert_recall/data/en/rank_bert.json',
                         type=str,
                         help='')
     parser.add_argument('--label_path',
-                        default='/home/data/qinchuan/TMIS/COTR/step3-bert_recall/data/en/task.csv',
+                        default='../step3-bert_recall/data/en/task.csv',
                         type=str, help='')
     parser.add_argument('--model_name',default='llama', choices=['llama', 'baichuan', 'nanbeige'],type=str,help='')
-    parser.add_argument('--output_dir',default='/home/data/qinchuan/TMIS/paper_code/output/data_obtain/llama_prompt_en',type=str,help='')
+    parser.add_argument('--output_dir',default='outputs/en/en/sft_lora_noinit',type=str,help='')
     parser.add_argument('--num_candidate',default=100,type=int,help='num_candidate')
     parser.add_argument('--num_train_epochs',default=100,type=int,help='')
     parser.add_argument('--lr',default=3e-5,type=float,help='')
@@ -56,7 +56,6 @@ def set_args():
     parser.add_argument('--task_name',default="eu",choices=['eu','en','jp'],type=str,help='')
     parser.add_argument('--train_or_test',default="train",type=str,help='')
     parser.add_argument('--device_id', default=0, type=int, help='')
-    parser.add_argument('--checkpoint',default="/home/data/qinchuan/TMIS/paper_code/output/data_obtain/llama_prompt_notinit/sp_cf_t3.bin",type=str,help='')
     parser.add_argument('--prompt_init', default=False, type=bool, help='')
     return parser.parse_args()
 
@@ -140,7 +139,7 @@ class PromptEncoder(torch.nn.Module):
         super().__init__()
         self.emsize = 4096
         self.args = args
-        with open('/home/data/qinchuan/TMIS/paper_code/data_obtain/prompt_init.json', 'r') as f:
+        with open('prompt_init.json', 'r') as f:
             prompt_init_dict = json.load(f)
         self.prompt_dict = prompt_init_dict[self.args.task_name][self.args.model_name]
         # 学映射表征
@@ -220,9 +219,12 @@ def train(data, model, tokenizer, args):
             prefix_prompt = ['### Query: Now gives 150 descriptions of specific intents and 1 specific text,\n specific class: '] * batch_size
             behind_prompt = [f'specific text:{text[i]} \n please sort the above 150 types of intents according to the degree of matching with the intent of the text.\n please strictly follow the format of the answer given:\n1.xxxx\n2.xxxx\n3.'
                              f'xxxx\n.  ### Answer:{answer[i]}' for i in range(batch_size)]
-        elif args.task_name == 'eu':
+        elif args.task_name in ['eu', 'en']:
             prefix_prompt = ['### Query: Now given 100 specific task descriptions and 1 specific position, \nSpecific tasks: '] * batch_size
             behind_prompt = [f'corresponding responsibilities: {text[i]}\nPlease select the 10 task descriptions that best match the corresponding responsibilities of the position from the above 100 task descriptions (sorted from high to low in terms of degree of conformity). \n Please strictly follow the following format for your answer: \n1.xxxx.\n2.xxxx.\n3.xxxx.\n ### Answer: {answer[i]}' for i in range(batch_size)]
+        elif args.task_name == 'jp':
+            prefix_prompt = ['### クエリ: 100 個の特定のタスクの説明と 1 つの特定のポジションが与えられます。\n具体的なタスク: '] * batch_size
+            behind_prompt = [f'対応する責任: {text[i]}\n上記の 100 個のタスク記述から、そのポジションの対応する責任に最も一致する 10 個のタスク記述を選択してください (適合度の高い順に並べ替えられています)。\n 回答では、次の形式に厳密に従ってください: \n1.xxxx.\n2.xxxx.\n3.xxxx.\n ### 回答:{answer[i]}' for i in range(batch_size)]
         else:
             prefix_prompt = ['###Query:现在给出100个具体任务的描述和1个具体的职位,\n具体任务:'] * batch_size
             behind_prompt = [f'对应的职责:{text[i]}\n请从上述100个任务描述中选择最符合该职位对应职责的10个任务描述(符合程度由高到底排序)。\n给出的答案请严格遵循下面的格式:\n1.xxxx。(任务x)\n2.xxxx。(任务x)\n3.xxxx。(任务x)\n……###Answer:{answer[i]}' for i in range(batch_size)]
@@ -376,139 +378,46 @@ def generate(data, model, tokenizer, args, device):
 def main():
     # deepspeed.init_distributed()
     args = set_args()
-    if args.model_name =='nanbeige':
-        model_dir = '/home/data/qinchuan/TMIS/COTR/llms/models--Nanbeige--Nanbeige2-8B-Chat/snapshots/b11c6c1b14b01bb42f861162e1049d08c4789ea2'
-    elif args.model_name =='llama':
-        # model_dir = '/home/data/qinchuan/TMIS/paper_code/llm_models/ydyajyA/Llama-2-13b-hf'
-        model_dir = '/home/data/qinchuan/TMIS/COTR/llms/Meta-Llama-3.1-8B-Instruct'
-    else:
-        model_dir = '/home/data/qinchuan/TMIS/paper_code/llm_models/baichuan-inc/Baichuan2-7B-Chat'
+    map_dir = {
+        'llama': "../llms/Meta-Llama-3.1-8B",
+        'baichuan': "../llms/Baichuan2-7B-Chat",
+        'nanbeige': "../llms/Nanbeige2-8B-Chat",
+    }
+    model_dir = map_dir[args.model_name]
     print('--------------------Loading data----------------------------')
     tokenizer= AutoTokenizer.from_pretrained(model_dir,bos_token='<s>',eos_token='</s>',pad_token='</s>',trust_remote_code=True)
-    if args.task_name =='bank':
-        args.num_candidate = 77
-        with open("/home/data/qinchuan/TMIS/paper_code/banking_data/categories.json", 'r') as f:
-            id2label = json.load(f)
-        label2id={}
-        for index, i in enumerate(id2label):
-            label2id[i]=int(index)
-        with open("/home/data/qinchuan/TMIS/paper_code/banking_data/rank.json", 'r') as f:
-            data = json.load(f)
-        query = pd.read_csv("/home/data/qinchuan/TMIS/paper_code/banking_data/train.csv")
-        text_list = []
-        candidate_list= []
-        answerlist =[]
-        label_list = []
-        # if args.data_end != args.data_begin:
-        #     if args.data_end>len(data['text']):
-        #         data = data.iloc[args.data_begin:].reset_index(drop=True)
-        #     else:
-        #         data = data.iloc[args.data_begin:args.data_end].reset_index(drop=True)
-        for ind,tmpdata in enumerate(data):
-            if ind < args.data_begin:continue
-            if ind >= args.data_end:break
-            text= tmpdata['text']
-            tmplist= []
-            for i in range(1,78):
-                tmplist.append(label2id[tmpdata[f"top{i}"]])
-            candidate_list.append(str(tmplist))
-            tmpanswer = []
-            for j in range(1, 6):
-                # if pd.isna(data[f'top{j}'][ind]): break
-                tmpanswer.append(str(j) + '.' + tmpdata[f'top{j}'])
-            answerlist.append('\n'.join(tmpanswer))
-            text_list.append(query['text'][ind])
-            label_list.append(query['category'][ind])
-    elif args.task_name == 'clinc':
-        args.num_candidate = 150
-        with open('/individual/fangchuyu/task_classify/lotrdatasets/clinc/id2label.json', 'r') as f:
-            id2label = json.load(f)
-        label2id = {}
-        for i in id2label:
-            label2id[id2label[i]] = int(i)
-        data = pd.read_csv('/individual/fangchuyu/icde/chatgpt_query/llmdata/clinctrain.csv')
-        query = pd.read_csv('/individual/fangchuyu/task_classify/data/simitopdata/clinc150.csv')
-        text_list = list(query['text'])
-        candidate_list = []
-        answerlist = []
-        if args.data_end != args.data_begin:
-            if args.data_end > len(data['text']):
-                data = data.iloc[args.data_begin:].reset_index(drop=True)
-            else:
-                data = data.iloc[args.data_begin:args.data_end].reset_index(drop=True)
-        for ind, i in enumerate(data['text']):
-            index = text_list.index(i)
-            text = query.iloc[index]['text']
-            tmplist = []
-            for i in range(1, 151):
-                tmplist.append(label2id[query.iloc[index][f"top{j}_name"].lower()])
-            candidate_list.append(str(tmplist))
-            tmpanswer = []
-            for j in range(1, 6):
-                if pd.isna(data[f'top{j}'][ind]): break
-                tmpanswer.append(str(j) + '.' + data[f'top{j}'][ind])
-            answerlist.append('\n'.join(tmpanswer))
-    elif args.task_name in ['eu', 'en', 'jp']:
-        args.num_candidate = 100
-        labellist = pd.read_csv(args.label_path, sep='\t')
-        label2id = {}
-        for index, i in enumerate(labellist['DWA Title']):
-            label2id[i] = int(index)
-        with open(args.rank_path, 'r') as f:
-            data = json.load(f)
-        query = pd.read_csv(args.data_path)
-        text_list = []
-        candidate_list = []
-        answerlist = []
-        label_list = []
-        # if args.data_end != args.data_begin:
-        #     if args.data_end>len(data['text']):
-        #         data = data.iloc[args.data_begin:].reset_index(drop=True)
-        #     else:
-        #         data = data.iloc[args.data_begin:args.data_end].reset_index(drop=True)
-        for ind, tmpdata in enumerate(data):
-            text = tmpdata['text']
-            tmplist = []
-            for i in range(1, 101):
-                tmplist.append(label2id[tmpdata[f"top{i}"]])
-            candidate_list.append(str(tmplist))
-            tmpanswer = []
-            tmpans = eval(query['gpt_task'][ind])
-            for j in range(1, 6):
-                # if pd.isna(data[f'top{j}'][ind]): break
-                tmpanswer.append(str(j) + '.' + tmpans[j])
-            answerlist.append('\n'.join(tmpanswer))
-            text_list.append(query['job_description'][ind])
-            label_list.append(query['task'][ind])
-    elif args.task_name == 'task':
-        args.num_candidate = 150
-        with open('/individual/fangchuyu/task_classify/label.json', 'r') as f:
-            id2label = json.load(f)
-        label2id = {}
-        for i in id2label:
-            label2id[id2label[i]] = int(i)
-        data = pd.read_csv('/individual/fangchuyu/icde/chatgpt_query/llmdata/tasktrain.csv')
-        query = pd.read_csv('/individual/fangchuyu/task_classify/data/simitopdata/task100.csv')
-        text_list = list(query['text'])
-        candidate_list = []
-        answerlist = []
-        if args.data_end != args.data_begin:
-            if args.data_end > len(data['text']):
-                data = data.iloc[args.data_begin:].reset_index(drop=True)
-            else:
-                data = data.iloc[args.data_begin:args.data_end].reset_index(drop=True)
-        for ind, i in enumerate(data['text']):
-            index = text_list.index(i)
-            text = query.iloc[index]['text']
-            tmplist = []
-            for i in range(1, 101):
-                tmplist.append(label2id[query.iloc[index][f"top{j}_name"].lower()])
-            candidate_list.append(str(tmplist))
-            tmpanswer = []
-            for j in range(1, 6):
-                if pd.isna(data[f'top{j}'][ind]): break
-                tmpanswer.append(str(j) + '.' + data[f'top{j}'][ind])
-            answerlist.append('\n'.join(tmpanswer))
+
+    args.num_candidate = 100
+    labellist = pd.read_csv(args.label_path, sep='\t')
+    label2id = {}
+    for index, i in enumerate(labellist['DWA Title']):
+        label2id[i] = int(index)
+    with open(args.rank_path, 'r') as f:
+        data = json.load(f)
+    query = pd.read_csv(args.data_path)
+    text_list = []
+    candidate_list = []
+    answerlist = []
+    label_list = []
+    # if args.data_end != args.data_begin:
+    #     if args.data_end>len(data['text']):
+    #         data = data.iloc[args.data_begin:].reset_index(drop=True)
+    #     else:
+    #         data = data.iloc[args.data_begin:args.data_end].reset_index(drop=True)
+    for ind, tmpdata in enumerate(data):
+        text = tmpdata['text']
+        tmplist = []
+        for i in range(1, 101):
+            tmplist.append(label2id[tmpdata[f"top{i}"]])
+        candidate_list.append(str(tmplist))
+        tmpanswer = []
+        tmpans = eval(query['gpt_task'][ind])
+        for j in range(1, 6):
+            # if pd.isna(data[f'top{j}'][ind]): break
+            tmpanswer.append(str(j) + '.' + tmpans[j])
+        answerlist.append('\n'.join(tmpanswer))
+        text_list.append(query['job_description'][ind])
+        label_list.append(query['task'][ind])
 
     data = pd.DataFrame({'text':text_list, 'candidate_list':candidate_list, 'answerlist':answerlist, 'label':label_list})
     # data['candidate_list'] = candidate_list
@@ -588,21 +497,9 @@ def main():
         for epoch in range(1, args.num_train_epochs + 1):
             train(train_data, model_d, tokenizer, args)
             if epoch % 5 == 0:
-                model_d.save_16bit_model(args.output_dir, 'sp_cf_t{}.bin'.format(epoch))
+                model_d.save_pretrained(f'{args.output_dir}/checkpoint-{epoch}')
         print('-------------train finish!!!-------------')
         print('best_epoch {} | loss {}'.format(best_epoch, best_val_loss))
-    else:
-        print('----------------- infering ------------------')
-
-        device = 'cuda:4'
-        data = Dataset.from_pandas(data)
-        eval_data = data_process(data, tokenizer)
-        checkpoint = torch.load(args.checkpoint, map_location='cpu')
-        model.to('cpu')
-        model.load_state_dict(checkpoint)
-        for param_name, param in model.named_parameters():
-            param.data = param.data.to(torch.bfloat16)
-        generate(eval_data, model.to(device), tokenizer, args, device)
 
 if __name__ == "__main__":
     main()

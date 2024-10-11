@@ -7,7 +7,7 @@ import torch, time, json
 import pandas as pd
 from tqdm import tqdm
 from config import args
-from utlis import gen
+from utils import gen
 
 def gen_prompt(idx):
     if args.dataset_name == 'jp':
@@ -24,20 +24,21 @@ def gen_prompt(idx):
 
     return ans
 
-df = pd.read_csv(args.input_path, sep='\t').reset_index()
+df = pd.read_csv(args.input_path).reset_index()
+df['bert_task'] = df['bert_task'].apply(eval)
 
 df['prompt'] = df.apply(lambda x: gen(x, args.dataset_name), axis=1) 
 
 
 length = len(df)
-model_path = f"../llms/{args.backbone}"
 
-tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)   
+
+tokenizer = AutoTokenizer.from_pretrained(args.model_path, trust_remote_code=True)   
 prompts_all = [[idx,gen_prompt(idx)] for idx in tqdm(range(length))]
 
 accelerator = Accelerator()
 model = AutoModelForCausalLM.from_pretrained(
-    model_path,    
+    args.model_path,    
     device_map={"": accelerator.process_index},
     torch_dtype=torch.float16,
     trust_remote_code=True
