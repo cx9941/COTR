@@ -25,6 +25,8 @@ def gen_prompt(idx):
     return ans
 
 df = pd.read_csv(args.input_path).reset_index()
+if args.mode != 'all':
+    df = df[df['tag']==1]
 df['bert_task'] = df['bert_task'].apply(eval)
 
 df['prompt'] = df.apply(lambda x: gen(x, args.dataset_name), axis=1) 

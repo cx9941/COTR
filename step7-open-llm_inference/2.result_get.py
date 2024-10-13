@@ -44,7 +44,8 @@ def string_similar(A, string_list):
 
     return closest_string
 result = pd.read_csv(args.data_path)
-result = result[(result['tag']==1) | (result['score']>args.thred)]
+# result = result[(result['tag']==1) | (result['score']>args.thred)]
+result = result[(result['tag']==1)].reset_index(drop=True)
 
 data = [open(f"{args.output_dir}/{i}.txt", 'r').read()  for i in range(len(os.listdir(args.output_dir)))][:len(result)]
 

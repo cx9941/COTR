@@ -1,5 +1,5 @@
 set -o errexit
-for dataset_name in 'jp'
+for dataset_name in 'en-enhanced' 'eu-enhanced' 'jp-enhanced'
 do
 for model_name in 'llama' 'baichuan' 'nanbeige'
 do

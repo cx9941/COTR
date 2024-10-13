@@ -36,7 +36,7 @@ def set_args():
     parser.add_argument('--rank_path', default='data/eu/rank_bert.json',
                         type=str,
                         help='')
-    parser.add_argument('--num_train_epochs',default=5,type=int,help='')
+    parser.add_argument('--num_train_epochs',default=10,type=int,help='')
     parser.add_argument('--lr',default=5e-4,type=float,help='')
     parser.add_argument('--per_device_train_batch_size',default=1,type=int,help='')
     parser.add_argument('--gradient_accumulation_steps',default=4,type=int,help='')
@@ -48,8 +48,8 @@ def set_args():
 
 def main():
     args = set_args()
-    if os.path.exists(args.output_dir):
-        return 0
+    # if os.path.exists(args.output_dir):
+    #     return 0
     map_dir = {
         'llama': "../llms/Meta-Llama-3.1-8B",
         'baichuan': "../llms/Baichuan2-7B-Chat",
@@ -107,7 +107,10 @@ def main():
     query_list= []
     for index in range(len(data)):
         text = data[index]['text']
-        name = "".join([f"class{j}." + data[index][f"top{j}"] for j in range(1, 31)])
+        if args.task_name == 'jp':
+            name = "".join([f"class{j}." + data[index][f"top{j}"] for j in range(1, 51)])
+        else:
+            name = "".join([f"class{j}." + data[index][f"top{j}"] for j in range(1, 101)])
 
         if args.task_name == 'jp':
             q = f"### クエリ: 100 個の特定のタスクの説明と 1 つの特定のポジションが与えられます。\n具体的なタスク: {name}\n 対応する責任: {text}\n上記の 100 個のタスク記述から、そのポジションの対応する責任に最も一致する 10 個のタスク記述を選択してください (適合度の高い順に並べ替えられています)。\n回答では、次の形式に厳密に従ってください: \n1.xxxx.\n2.xxxx.\n3.xxxx.\n ### 回答:"

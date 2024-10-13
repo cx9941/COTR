@@ -4,6 +4,7 @@ from utils import get_lastest_checkpoint
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_name', type=str, default='en')
+parser.add_argument('--mode', type=str, default='all')
 parser.add_argument('--model_name', type=str, default='nanbeige-sft')
 parser.add_argument('--seed', type=int, default=0)
 parser.add_argument('--thred', type=int, default=50)
@@ -27,8 +28,12 @@ args.model_path = map_dir[args.model_name]
 if 'sft' in args.model_name:
     args.model_path = get_lastest_checkpoint(args.model_path)
 
-args.output_dir = f"outputs/{args.dataset_name}/{args.model_name}/seed{args.seed}"
-args.metrics_dir = f"metrics/{args.dataset_name}/{args.model_name}/seed{args.seed}"
+if args.mode == 'all':
+    args.output_dir = f"outputs_all/{args.dataset_name}/{args.model_name}/seed{args.seed}"
+    args.metrics_dir = f"metrics_all/{args.dataset_name}/{args.model_name}/seed{args.seed}"
+else:
+    args.output_dir = f"outputs/{args.dataset_name}/{args.model_name}/seed{args.seed}"
+    args.metrics_dir = f"metrics/{args.dataset_name}/{args.model_name}/seed{args.seed}"
 args.input_path = f"data/{args.dataset_name}.csv"
 args.metric_path = f'{args.metrics_dir}/thred_{args.thred}.json'
 
