@@ -4,7 +4,7 @@ Chinese job descriptions：https://tianchi.aliyun.com/dataset/182419
 
 America job descriptions：https://www.kaggle.com/datasets/arshkon/linkedin-job-postings
 
-Europe job descriptions：https://www.kaggle.com/datasets/arshkon/linkedin-job-postings
+Europe job descriptions：https://www.kaggle.com/datasets/thedevastator/job-postings-in-europe
 
 French job descriptions：https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/CHUEJM
 
