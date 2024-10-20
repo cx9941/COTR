@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 
 # 计算余弦相似度
 def cosine_similarity_matrix(jobs, tasks):
@@ -46,9 +47,10 @@ def calculate_recall_precision_hits(all_job_embeddings, all_task_embeddings, all
     rankings, sort_similarity_matrix = get_ranking(similarity_matrix)
     
     # Step 3: 计算 recall, precision 和 hits
-    recall_scores, precision_scores, hit_scores = compute_metrics(rankings, all_labels, k_values=[1, 3, 5, 10, 20, 50, 100, 200])
+    recall_scores, precision_scores, hit_scores = compute_metrics(rankings, all_labels, k_values=[5, 10, 100, 200])
     
     return recall_scores, precision_scores, hit_scores
+
 
 if __name__ == '__main__':
     recall_scores, precision_scores, hit_scores = calculate_recall_precision_hits(all_job_embeddings, all_task_embeddings, all_labels)

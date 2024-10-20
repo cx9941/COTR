@@ -10,10 +10,12 @@ def get_args():
     parser.add_argument('--top_num', type=int, default=100, help='Batch size')
     parser.add_argument('--epochs', type=int, default=10, help='Number of training epochs')
     parser.add_argument('--max_len', type=int, default=256, help='Maximum sequence length for BERT')
+    parser.add_argument('--k', type=int, default=10, help='Maximum sequence length for BERT')
     parser.add_argument('--train_file_path', type=str, default='../data/task_data.csv', help='Pretrained BERT model')
-    parser.add_argument('--dataset_name', type=str, default='jp', help='Device to run the model on')
+    parser.add_argument('--dataset_name', type=str, default='en', help='Device to run the model on')
     parser.add_argument('--device', type=str, default='cuda', help='Device to run the model on')
-    parser.add_argument('--mode', type=str, default='test', help='Device to run the model on')
+    parser.add_argument('--mode', type=str, default='train', help='Device to run the model on')
+    parser.add_argument('--bert_mode', type=str, default='normal', help='Device to run the model on')
     args = parser.parse_args()
     args.checkpoint_path = f"outputs/{args.dataset_name}/{args.learning_rate}_{args.batch_size}_{args.train_ratio}"
     args.result_path = f"results/{args.dataset_name}/{args.learning_rate}_{args.batch_size}_{args.train_ratio}"

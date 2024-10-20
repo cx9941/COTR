@@ -16,7 +16,7 @@ def main():
     job_model = torch.load(f"{args.checkpoint_path}/job_model.pt")
     task_model = torch.load(f"{args.checkpoint_path}/task_model.pt")
 
-    trainer = Trainer(job_model, task_model, args.device)
+    trainer = Trainer(job_model, task_model, args.device, bert_mode=args.bert_mode)
     sort_similarity_matrix, rankings = trainer.test(eval_job, eval_task)
 
     eval_job_dataset = eval_job.dataset.data
@@ -31,8 +31,8 @@ def main():
         candidate_task_sim.columns = [f'task{i}_sim']
 
         eval_job_dataset = pd.concat([eval_job_dataset, candidate_task, candidate_task_sim], axis=1)
-    eval_job_dataset.to_csv(f"{args.result_path}/{args.dataset_name}.csv", index=None, sep='\t')
-    eval_job_dataset.to_excel(f"{args.result_path}/{args.dataset_name}.xlsx", index=None)
+    eval_job_dataset.to_csv(f"{args.result_path}/{args.dataset_name}-{args.bert_mode}.csv", index=None, sep='\t')
+    eval_job_dataset.to_excel(f"{args.result_path}/{args.dataset_name}-{args.bert_mode}.xlsx", index=None)
 
 if __name__ == '__main__':
     main()

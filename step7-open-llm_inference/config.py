@@ -22,6 +22,9 @@ map_dir = {
     "baichuan-sft":  f"../step6-open_llm_sft/outputs/{args.dataset_name}/baichuan/sft",
     "nanbeige-sft":  f"../step6-open_llm_sft/outputs/{args.dataset_name}/nanbeige/sft",
     "llama-sft":  f"../step6-open_llm_sft/outputs/{args.dataset_name}/llama/sft",
+    "baichuan-sft-enhanced":  f"../step6-open_llm_sft/outputs/{args.dataset_name}-enhanced/baichuan/sft",
+    "nanbeige-sft-enhanced":  f"../step6-open_llm_sft/outputs/{args.dataset_name}-enhanced/nanbeige/sft",
+    "llama-sft-enhanced":  f"../step6-open_llm_sft/outputs/{args.dataset_name}-enhanced/llama/sft",
 }
 
 args.model_path = map_dir[args.model_name]

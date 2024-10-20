@@ -25,7 +25,7 @@ def main():
     optimizer = AdamW(list(job_model.parameters()) + list(task_model.parameters()), lr=args.learning_rate)
 
     # Trainer
-    trainer = Trainer(job_model, task_model, optimizer=optimizer, device=args.device)
+    trainer = Trainer(job_model, task_model, optimizer=optimizer, device=args.device, bert_mode=args.bert_mode)
 
     # Training loop
     eval_metrics = trainer.evaluate(eval_job, eval_task)
